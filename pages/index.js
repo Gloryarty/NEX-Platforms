@@ -2,12 +2,7 @@ import Head from "next/head";
 import Image from "next/image";
 import bg from "../res/BG.png";
 import logo from "../res/Logo.png";
-import image1 from "../res/g1.png";
-import image2 from "../res/g2_new.png";
-import image3 from "../res/g3.png";
-import image4 from "../res/g4.png";
-import image5 from "../res/g5.png";
-import image6 from "../res/g6.png";
+import gameLogo from "../res/Game_Logo.png";
 import Carousel from "../components/Home/Carousel";
 import CompanyNews from "../components/Home/CompanyNews";
 import Partnership from "../components/Home/Partnership";
@@ -64,12 +59,7 @@ export default function Home() {
               </div>
             </div>
             <div className="rCont">
-              <Image className="gridItems" src={image1} alt="logo" />
-              <Image className="gridItems" src={image2} alt="logo" />
-              <Image className="gridItems" src={image3} alt="logo" />
-              <Image className="gridItems" src={image4} alt="logo" />
-              <Image className="gridItems" src={image5} alt="logo" />
-              <Image className="gridItems" src={image6} alt="logo" />
+              <Image className="gridItems" src={gameLogo} alt="RushRetake" />
             </div>
           </section>
           <ScopedItems />
