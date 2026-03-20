@@ -2,9 +2,9 @@
   {
     "name": "RushRetake",
     "link": "#",
-    "squareImage": "/res/Game_Logo.png",
-    "wideImage": "/res/Game_Logo.png",
-    "superWideImage": "/res/Game_Logo.png",
+    "squareImage": "https://gloryarty.github.io/NEX-Platforms/_next/static/media/Game_Logo.1546c1d4.png",
+    "wideImage": "https://gloryarty.github.io/NEX-Platforms/_next/static/media/Game_Logo.1546c1d4.png",
+    "superWideImage": "https://gloryarty.github.io/NEX-Platforms/_next/static/media/Game_Logo.1546c1d4.png",
     "game": "Y",
     "tallImage": "",
     "shortDesc": "Fast-paced tactical shooter by NEX Platforms",
