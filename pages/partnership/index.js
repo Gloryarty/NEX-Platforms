@@ -24,7 +24,7 @@ export default function Policies() {
                 partnering with NEX Platforms?
                 <br></br>
                 <br></br>
-                Email us at info@legiongames.io
+                Email us at nexplatforms@gmail.com
               </div>
             </div>
           </section>

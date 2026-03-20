@@ -1,19 +1,7 @@
 import React from "react";
 import data from "../../res/searchData.json";
 
-const getGameByName = (gameName) => {
-  return data.find((item) => item.name === gameName);
-};
-
-const scopedItemsData = [
-  getGameByName("Kour.io"),
-  getGameByName("Poxel.io"),
-  getGameByName("Plundur.io"),
-  getGameByName("Overtide.io"),
-  getGameByName("KourStrike.io"),
-  getGameByName("FoodStars.io"),
-  getGameByName("KourZone.io"),
-];
+const scopedItemsData = data.filter((item) => item.name === "RushRetake");
 
 const handleClick = (url) => {
   const elem = document.createElement("a");

@@ -6,7 +6,7 @@ export default function Jobs() {
     <section className="aSection jobs" id="jobsection">
       <div className="mainCont">
         <div className="title">Open Positions</div>
-        <div className="subtitle">Email your resume and portfolio to info@legiongames.io</div>
+        <div className="subtitle">Email your resume and portfolio to nexplatforms@gmail.com</div>
         <div className="jobs">
           {jobs.map((item, index) => (
             <div key={index} className="job">
