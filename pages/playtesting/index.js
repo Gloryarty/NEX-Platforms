@@ -8,8 +8,8 @@ export default function Policies() {
   return (
     <>
       <Head>
-        <title>LegionGames.io - Playtesting</title>
-        <meta name="description" content="LegionGames.io" />
+        <title>NEX Platforms - Playtesting</title>
+        <meta name="description" content="NEX Platforms" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
@@ -20,7 +20,7 @@ export default function Policies() {
           <section className="aSection ourCompany">
             <div className="mainCont">
               <div className="message">
-                Interested in potentially playtesting future LEGiON Platform
+                Interested in potentially playtesting future NEX Platforms Platform
                 Products?
                 <br></br>
                 <br></br>

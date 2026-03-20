@@ -5,7 +5,7 @@ export default function JoinOurTeam() {
   const router = useRouter();
   return (
     <section className="aSection workWithUs">
-      <div className="sub-title">LEGiON Careers & Internships</div>
+      <div className="sub-title">NEX Platforms Careers & Internships</div>
       <div className="title">Join Our Team</div>
       <button onClick={() => router.push("/careers")}>
         View Careers & Internships

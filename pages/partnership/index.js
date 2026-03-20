@@ -8,8 +8,8 @@ export default function Policies() {
   return (
     <>
       <Head>
-        <title>LegionGames.io - Partnership</title>
-        <meta name="description" content="LegionGames.io" />
+        <title>NEX Platforms - Partnership</title>
+        <meta name="description" content="NEX Platforms" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
@@ -21,7 +21,7 @@ export default function Policies() {
             <div className="mainCont">
               <div className="message">
                 Are you interested in taking your company to the next level by
-                partnering with Legion Platforms?
+                partnering with NEX Platforms?
                 <br></br>
                 <br></br>
                 Email us at info@legiongames.io

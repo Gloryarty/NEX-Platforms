@@ -6,7 +6,7 @@ const data = [
     title: "Information",
     items: [
       {
-        title: "About LEGiON",
+        title: "About NEX Platforms",
         link: "/company",
       },
     ],

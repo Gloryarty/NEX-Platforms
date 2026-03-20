@@ -10,8 +10,8 @@ export default function TermsOfService() {
   return (
     <>
       <Head>
-        <title>LegionGames.io - Terms Of Service</title>
-        <meta name="description" content="LegionGames.io" />
+        <title>NEX Platforms - Terms Of Service</title>
+        <meta name="description" content="NEX Platforms" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>

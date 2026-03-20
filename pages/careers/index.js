@@ -11,8 +11,8 @@ export default function index() {
   return (
     <>
       <Head>
-        <title>LegionGames.io - Careers</title>
-        <meta name="description" content="LegionGames.io" />
+        <title>NEX Platforms - Careers</title>
+        <meta name="description" content="NEX Platforms" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>

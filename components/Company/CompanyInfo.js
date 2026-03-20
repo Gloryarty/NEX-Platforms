@@ -13,7 +13,7 @@ export default function CompanyInfo() {
         <div className="lCont">
           <div className="title">Experiences that matter</div>
           <div className="info">
-            At LEGiON Platforms we are proud to use cutting-edge technology to
+            At NEX Platforms Platforms we are proud to use cutting-edge technology to
             create immersive and engaging gaming experiences for our users. We
             strive to push the boundaries of what is possible in gaming and
             constantly work to improve the user experience.
@@ -31,7 +31,7 @@ export default function CompanyInfo() {
         <div className="lCont">
           <div className="title">We work to innovate</div>
           <div className="info">
-            LEGiON Platforms is dedicated to innovation in technology,
+            NEX Platforms Platforms is dedicated to innovation in technology,
             constantly pushing the boundaries of what is possible in the gaming
             industry. Our focus on the latest advancements in technology allows
             us to create truly immersive experiences for our users.

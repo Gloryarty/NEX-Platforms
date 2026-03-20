@@ -5,7 +5,7 @@ export default function Help() {
     <div className="termsTextSet">
       <div className="info">
         {`
-        At LEGiON Platforms, we are committed to providing our customers with
+        At NEX Platforms Platforms, we are committed to providing our customers with
         the best possible experience when using our products and services. We
         understand that sometimes, users may encounter issues or have questions
         that need answering. That's why we're here to help.`}
@@ -13,7 +13,7 @@ export default function Help() {
 
       <div className="info">
         {`If you need assistance, you can reach out to us by emailing us at
-        legionplatforms@gmail.com. Our dedicated support team will be more than
+        nexplatforms@gmail.com. Our dedicated support team will be more than
         happy to assist you with any issues you may be facing. 
         
         `}
@@ -28,7 +28,7 @@ export default function Help() {
       </div>
       <div className="info">
         {`
-        Thank you for choosing LEGiON Platforms. We look forward to
+        Thank you for choosing NEX Platforms Platforms. We look forward to
         serving you and ensuring that your experience with our products and
         services is a positive one.
         `}

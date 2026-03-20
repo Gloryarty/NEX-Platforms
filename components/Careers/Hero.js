@@ -6,7 +6,7 @@ export default function Hero() {
 
   return (
     <section className="aSection careersHero ">
-      <div className="sub-title">CAREERS & INTERNSHIPS AT LEGiON PLATFORMS</div>
+      <div className="sub-title">CAREERS & INTERNSHIPS AT NEX Platforms PLATFORMS</div>
       <div className="title">
         Join us in building the
         <br></br>
@@ -18,7 +18,7 @@ export default function Hero() {
           link.setAttribute("href", "#jobsection")
           link.click()
         }}>View Open Positions</button>
-        <button onClick={() => router.push("/internships")}>LEGiON Internships</button>
+        <button onClick={() => router.push("/internships")}>NEX Platforms Internships</button>
       </div>
     </section>
   );

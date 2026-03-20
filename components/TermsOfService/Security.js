@@ -4,7 +4,7 @@ export default function Security() {
   return (
     <div className="termsTextSet">
       <div className="info">
-        LEGiON Platforms is committed to maintaining the security of our
+        NEX Platforms Platforms is committed to maintaining the security of our
         products and software to ensure the safety of our users. We take active
         measures to protect our users from malicious content and unauthorized
         access to our systems. This includes regular security audits and

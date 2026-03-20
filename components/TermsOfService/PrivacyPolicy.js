@@ -4,13 +4,13 @@ export default function PrivacyPolicy() {
   return (
     <div className="termsTextSet">
       <div className="info">
-        At LEGiON Platforms, we take the privacy of our users and customers very
+        At NEX Platforms Platforms, we take the privacy of our users and customers very
         seriously. We understand that trust is a vital component of our
         relationship with you, and we are committed to protecting your personal
         information in accordance with applicable laws and regulations.{" "}
         <br></br>Our Privacy Policy applies to all of our websites, including
-        https://plundur.io, https://legionplatforms.com, the LEGiON Portal,
-        LEGiON Distribution, and https://CrazyRun.io, as well as any other
+        https://plundur.io, https://legionplatforms.com, the NEX Platforms Portal,
+        NEX Platforms Distribution, and https://CrazyRun.io, as well as any other
         products or services we may offer.
       </div>
       <div className="head">Information Collection and Use</div>
@@ -55,7 +55,7 @@ export default function PrivacyPolicy() {
       <div className="info">
         If you have any questions or concerns about our Privacy Policy or the
         personal information we have collected about you, please contact us at
-        legionplatforms@gmail.com.
+        nexplatforms@gmail.com.
       </div>
     </div>
   );

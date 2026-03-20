@@ -31,7 +31,7 @@ export default function News({ news }) {
     <>
       <Head>
         <title>{news.shortTitle}</title>
-        <meta name="description" content="LegionGames.io" />
+        <meta name="description" content="NEX Platforms" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href={news.thumbnail} />
       </Head>

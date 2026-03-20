@@ -22,7 +22,6 @@ import Nav from "../components/Nav";
 import WorkWithUs from "../components/Home/JoinOurTeam";
 import Company from "../components/Home/Company";
 import { useRouter } from "next/router";
-import EcoSystem from "../components/Home/EcoSystem";
 import Carousel2 from "../components/Home/Carousel2";
 import baseConfig from '../res/baseConfig.json'
 
@@ -36,8 +35,8 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>LegionGames.io</title>
-        <meta name="description" content="LegionGames.io" />
+        <title>NEX Platforms</title>
+        <meta name="description" content="NEX Platforms" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
@@ -74,7 +73,6 @@ export default function Home() {
             </div>
           </section>
           <ScopedItems />
-          <EcoSystem />
           <section className="aSection">
             <Carousel />
           </section>

@@ -45,7 +45,7 @@ export default function EcoSystem() {
   return (
     <section id="legionExperiences" className="aSection legionEcoSystem">
       <div className="title">
-        The <span>LegionGames.io</span> Ecosystem
+        The <span>NEX Platforms</span> Ecosystem
       </div>
       <div className="info">Join the ultimate ecosystem, built for all</div>
       {/* <button onClick={() => router.push("/company#companyinfo")}>
@@ -62,7 +62,7 @@ export default function EcoSystem() {
           <div className="card">
             <div className="logo" onClick={() => router.push("/")}>
               <img alt="Logo" src={legionLogo} />
-              LEGiON Portal
+              NEX Platforms Portal
             </div>
             <div className="content">
               Play thousands of <br></br>games within clicks
@@ -97,7 +97,7 @@ export default function EcoSystem() {
           <div className="card">
             <div className="logo" onClick={() => router.push("/")}>
               <img alt="Logo" src={legionLogo} />
-              LEGiON Distribution
+              NEX Platforms Distribution
             </div>
             <div className="content">
               Premium games for<br></br> your products
@@ -132,7 +132,7 @@ export default function EcoSystem() {
           <div className="card">
             <div className="logo" onClick={() => router.push("/")}>
               <img alt="Logo" src={legionLogo} />
-              LEGiON Publishing
+              NEX Platforms Publishing
             </div>
             <div className="content">
               Bring your game or<br></br> project to millions
@@ -169,7 +169,7 @@ export default function EcoSystem() {
           <div className="card">
             <div className="logo" onClick={() => router.push("/")}>
               <img alt="Logo" src={legionLogo} />
-              LEGiON Advertising
+              NEX Platforms Advertising
             </div>
             <div className="content">
               Advertise your brand<br></br> to millions
@@ -204,7 +204,7 @@ export default function EcoSystem() {
           <div className="card">
             <div className="logo" onClick={() => router.push("/")}>
               <img alt="Logo" src={legionLogo} />
-              LEGiON White Label
+              NEX Platforms White Label
             </div>
             <div className="content">
               Ultimate white label<br></br> for your products
@@ -233,7 +233,7 @@ export default function EcoSystem() {
           <div className="card">
             <div className="logo" onClick={() => router.push("/")}>
               <img alt="Logo" src={legionLogo} />
-              LEGiON Database
+              NEX Platforms Database
             </div>
             <div className="content">
               Database, backend,<br></br> dashboard all in one

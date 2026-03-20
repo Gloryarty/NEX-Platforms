@@ -4,7 +4,7 @@ export default function TermsOfServiceSection() {
   return (
     <div className="termsTextSet">
       <div className="info">
-        This Website is provided by Legion Platforms. Your use of this
+        This Website is provided by NEX Platforms. Your use of this
         Website is subject to these Terms and Conditions of Website Use. Please
         read this User Agreement and the other information referred or linked to
         in this User Agreement carefully and be sure you understand it, since it
@@ -15,7 +15,7 @@ export default function TermsOfServiceSection() {
       </div>
       <div className="head">1. Right to use this website</div>
       <div className="info">
-        Legion Platforms grants you a limited, non-exclusive, revocable license
+        NEX Platforms grants you a limited, non-exclusive, revocable license
         for you to use this Website for your personal entertainment,
         information, education, and communication, upon all of the terms of this
         User Agreement. This Website contains materials and other items relating
@@ -34,7 +34,7 @@ export default function TermsOfServiceSection() {
       <div className="head">2. Trademarks</div>
       <div className="info">
         Plundur.io is a trademark- and copyright protected brand fully owned by
-        Legion Platforms. All images, logos and animations presented on the
+        NEX Platforms. All images, logos and animations presented on the
         Plundur.io game are copyright protected but can be used free of charge
         by third parties only for the purpose of the specific promotion of
         Plundur.io. Any content of Plundur.io or related to Plundur.io. may not
@@ -45,7 +45,7 @@ export default function TermsOfServiceSection() {
       <div className="head">3. Copyright</div>
       <div className="info">
         Every single 3D model, sound, line of code, art piece, logo, in
-        Plundur.io is fully owned and protected by Legion Platforms. We do
+        Plundur.io is fully owned and protected by NEX Platforms. We do
         not allow third party use unless given permission to do so by Legion
         Platforms. If anything in Plundur.io is used without permission, legal
         action can and will be taken.
@@ -58,13 +58,13 @@ export default function TermsOfServiceSection() {
       </div>
       <div className="head">5. Termination of Service</div>
       <div className="info">
-        Plundur.io / Legion Platforms reserves the right to terminate this
+        Plundur.io / NEX Platforms reserves the right to terminate this
         Service, without prior notice, for contravening the requirement to
         comply with the conditions set out under the present Agreement. In the
-        event of minor violations, Plundur.io / Legion Platforms will issue
+        event of minor violations, Plundur.io / NEX Platforms will issue
         a first warning stating the violation prior to terminating the Service.
         In the event that a behavior is utterly unacceptable, Plundur.io /
-        Legion Platforms will not be required to issue said prior notice. A
+        NEX Platforms will not be required to issue said prior notice. A
         behavior is considered utterly unacceptable in the case of a serious
         violation of any of the provisions set out under this Agreement. You may
         cancel this Service at any time by ceasing all use of the latter, save

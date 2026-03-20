@@ -11,7 +11,7 @@ export default function CompanyNews({ mainpage = false, data = [] }) {
       <div className="newsCont">
         {data.map(
           (item, index) =>
-            item.pageType === "LEGiON Press Release" && (
+            item.pageType === "NEX Platforms Press Release" && (
               <div key={index} className="news">
                 <div className="imageCont">
                   <img src={item.thumbnail} className="bg" alt="news" />

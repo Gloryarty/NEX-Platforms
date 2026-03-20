@@ -8,8 +8,8 @@ export default function Policies() {
   return (
     <>
       <Head>
-        <title>LegionGames.io - Internships</title>
-        <meta name="description" content="LegionGames.io" />
+        <title>NEX Platforms - Internships</title>
+        <meta name="description" content="NEX Platforms" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
@@ -23,7 +23,7 @@ export default function Policies() {
                 Do you want to join our team as an intern? Email us and send us your resume, and we&apos;ll get back to you in 2-3 business days.
                 <br></br>
                 <br></br>
-                Email us at legionplatforms@gmail.com
+                Email us at nexplatforms@gmail.com
               </div>
             </div>
           </section>

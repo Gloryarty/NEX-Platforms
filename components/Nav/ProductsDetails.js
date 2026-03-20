@@ -1,47 +1,16 @@
 import React from "react";
-import data from "../../res/searchData.json";
 
-const getGameByName = (gameName) => {
-  return data.find((item) => item.name === gameName);
+const rushRetake = {
+  name: "RushRetake",
+  link: "#",
+  squareImage: "/res/g1.png",
+  navDesc: "Fast-paced tactical shooter",
 };
-
-const popularGames = [
-  getGameByName("Kour.io"),
-  getGameByName("FoodStars.io"),
-  getGameByName("Plundur.io"),
-  // getGameByName("FPS Game"),
-];
-
-const legionEcoSystem = [
-  getGameByName("LEGiON Portal"),
-  getGameByName("LEGiON Distribution"),
-  getGameByName("LEGiON Publishing"),
-];
-
-const featuredGames = [
-  getGameByName("Poxel.io"),
-  getGameByName("Overtide.io"),
-  getGameByName("KourStrike.io"),
-];
-
-const comingSoon = [getGameByName("War FPS"), getGameByName("The Seas")];
 
 const mainData = [
   {
-    title: "Popular Games",
-    items: popularGames,
-  },
-  {
-    title: "LEGiON Ecosystem",
-    items: legionEcoSystem,
-  },
-  {
-    title: "Featured Games",
-    items: featuredGames,
-  },
-  {
-    title: "Coming Soon",
-    items: comingSoon,
+    title: "Our Game",
+    items: [rushRetake],
   },
 ];
 
@@ -70,11 +39,7 @@ export default function ProductsDetails() {
                   ></div>
                   <div className="infoCont">
                     <div
-                      onClick={
-                        item.title !== "Coming Soon"
-                          ? () => handleClick(currItem.link)
-                          : () => {}
-                      }
+                      onClick={() => handleClick(currItem.link)}
                       className="infoTitle"
                     >
                       {currItem.name}

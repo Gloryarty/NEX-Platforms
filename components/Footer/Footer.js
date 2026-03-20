@@ -2,25 +2,13 @@ import Image from "next/image";
 import React from "react";
 import logo from "../../res/logo.png";
 import { useRouter } from "next/router";
-import data from "../../res/searchData.json";
-import baseConfig from "../../res/baseConfig.json"
+import baseConfig from "../../res/baseConfig.json";
 
-const getGameByName = (gameName) => {
-  return data.find((item) => item.name === gameName);
+const rushRetake = {
+  name: "RushRetake",
+  link: "#",
 };
-
-const popularGames = [
-  getGameByName("Kour.io"),
-  getGameByName("Plundur.io"),
-  getGameByName("FoodStars.io"),
-  // getGameByName("FPS Game"),
-];
-
-const legionEcoSystem = [
-  getGameByName("LEGiON Portal"),
-  getGameByName("LEGiON Distribution"),
-  getGameByName("LEGiON Publishing"),
-];
+const productList = [rushRetake];
 
 const handleClick = (url) => {
   const elem = document.createElement("a");
@@ -37,7 +25,7 @@ export default function Footer() {
         <div className="lCont">
           <div className="logoCont">
             <Image src={logo} alt="logo" />
-            LegionGames.io
+            NEX Platforms
           </div>
           <div className="footerHeroTitle">Experiences that matter.</div>
           <div className="location">
@@ -76,30 +64,14 @@ export default function Footer() {
           </div>
           <div className="mainLogoCont">
             <Image src={logo} alt="logo" />
-            <div>Legion Games.io</div>
+            <div>NEX Platforms</div>
           </div>
         </section>
         <section className="footerSection">
-          <div className="header">Games</div>
+          <div className="header">Product</div>
           <div className="referenceHolder">
-            {popularGames.map((item, index) => (
+            {productList.map((item, index) => (
               <div onClick={() => handleClick(item.link)} key={index}>
-                {item.name}
-              </div>
-            ))}
-          </div>
-        </section>
-        <section className="footerSection">
-          <div className="header">Platforms</div>
-          <div className="referenceHolder">
-            {legionEcoSystem.map((item, index) => (
-              <div
-                onClick={() =>
-                  // handleClick(item.link)
-                  {}
-                }
-                key={index}
-              >
                 {item.name}
               </div>
             ))}
@@ -126,14 +98,14 @@ export default function Footer() {
         <section className="footerSection">
           <div className="header">Directory</div>
           <div className="referenceHolder">
-            <div onClick={() => router.push("/company")}>About LEGiON</div>
+            <div onClick={() => router.push("/company")}>About NEX Platforms</div>
             <div onClick={() => router.push("/careers")}>Careers</div>
             <div>Help Center</div>
           </div>
         </section>
       </div>
       <div className="footerEnd">
-        {baseConfig.service_till} LegionGames.io - All Rights Reserved.
+        {baseConfig.service_till} NEX Platforms - All Rights Reserved.
       </div>
     </footer>
   );

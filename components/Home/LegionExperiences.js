@@ -20,7 +20,7 @@ export default function LegionExperiences() {
   return (
     <section id="legionExperiences" className="aSection legionexperiences">
       <div className="title">
-        LegionGames.io <span>Experiences</span>
+        NEX Platforms <span>Experiences</span>
       </div>
       <div className="info">Quality experiences, available for everyone</div>
       <div className="slider">

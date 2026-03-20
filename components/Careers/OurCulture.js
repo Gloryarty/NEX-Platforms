@@ -19,7 +19,7 @@ const defaultSet = [
   {
     logo: "ri-tools-fill",
     head: "We build new worlds",
-    info: "Here at LEGiON - we plan, we build, and we finish",
+    info: "Here at NEX Platforms - we plan, we build, and we finish",
   },
 ];
 

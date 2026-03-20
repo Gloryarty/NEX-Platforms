@@ -24,7 +24,7 @@ export default function Nav() {
         <div className="mainWrapper">
           <div className="logo" onClick={() => router.push("/")}>
             <Image alt="Logo" src={Logo} />
-            LegionGames.io
+            NEX Platforms
           </div>
           <div className="links">
             <NavItem title="Products" ExpandedElem={<ProductsDetails />} />
@@ -49,7 +49,7 @@ export default function Nav() {
         <div className="mainWrapper">
           <div className="logo" onClick={() => router.push("/")}>
             <Image alt="Logo" src={Logo} />
-            LegionGames.io
+            NEX Platforms
           </div>
           {/* <div className="links">
             <NavItem title="Products" ExpandedElem={<ProductsDetails />} />
