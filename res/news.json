@@ -2,15 +2,15 @@
   {
     "id": "001",
     "title": "NEX Platforms launches RushRetake",
-    "thumbnail": "/res/g1.png",
-    "coverImage": "/res/g1.png",
+    "thumbnail": "/res/Game_Logo.png",
+    "coverImage": "/res/Game_Logo.png",
     "date": "March 20, 2026",
     "dateID": "3/20/26",
     "category": "GAME RELEASE",
     "type": "News",
     "pageType": "NEX Platforms Press Release",
     "shortTitle": "RushRetake is live",
-    "altImage": "/res/g1.png",
+    "altImage": "/res/Game_Logo.png",
     "article": "NEX Platforms has released RushRetake, a fast-paced tactical shooter built for instant browser play. RushRetake brings quick rounds, tight gunplay, and team-focused objectives in an experience that loads in seconds. Play now and tell us what you think at nexplatforms@gmail.com."
   }
 ]
