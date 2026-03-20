@@ -1,6 +1,6 @@
 import Image from "next/image";
 import React from "react";
-import logo from "../../res/logo.png";
+import logo from "../../res/Logo.png";
 import { useRouter } from "next/router";
 import baseConfig from "../../res/baseConfig.json";
 

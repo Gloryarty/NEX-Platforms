@@ -30,7 +30,7 @@ const images = [
   "/res/ecosystem/eco_13.png",
 ];
 
-const legionLogo = "/res/logo.png";
+const legionLogo = "/res/Logo.png";
 
 export default function EcoSystem() {
   const handleClick = (url) => {

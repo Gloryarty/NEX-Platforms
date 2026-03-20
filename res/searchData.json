@@ -18,9 +18,9 @@
   {
     "name": "About NEX Platforms",
     "link": "/company",
-    "squareImage": "/res/logo.png",
-    "wideImage": "/res/logo.png",
-    "superWideImage": "/res/logo.png",
+    "squareImage": "/res/Logo.png",
+    "wideImage": "/res/Logo.png",
+    "superWideImage": "/res/Logo.png",
     "game": "N",
     "tallImage": "",
     "shortDesc": "Discover NEX Platforms.",

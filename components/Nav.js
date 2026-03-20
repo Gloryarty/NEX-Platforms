@@ -1,5 +1,5 @@
 import Search from "./Search";
-import Logo from "../res/logo.png";
+import Logo from "../res/Logo.png";
 import Image from "next/image";
 import NavItem from "./Nav/NavItem";
 // import NavDetails from "./Nav/NavDetails";
