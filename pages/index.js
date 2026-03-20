@@ -1,6 +1,6 @@
 import Head from "next/head";
 import Image from "next/image";
-import bg from "../res/heroBG.png";
+import bg from "../res/BG.png";
 import logo from "../res/Logo.png";
 import image1 from "../res/g1.png";
 import image2 from "../res/g2_new.png";
