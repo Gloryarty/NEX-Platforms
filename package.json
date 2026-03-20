@@ -2,7 +2,7 @@
   "name": "legiongames.io",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://cbox9234.github.io",
+  "homepage": "https://gloryarty.github.io/NEX-Platforms",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
