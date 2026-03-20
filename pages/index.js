@@ -50,8 +50,7 @@ export default function Home() {
             <div className="lCont">
               <div className="title">Experiences that matter.</div>
               <div className="subTitle">
-                We create games and experiences that <br></br> are loved by {baseConfig.users}
-                {" " + baseConfig.user_count_unit} users worldwide.
+                {baseConfig.users} {baseConfig.user_count_unit} people know our games worldwide.
               </div>
               <div className="heroBtnSet">
                 <button onClick={() => gotoExplore()} className="heroBtn">
