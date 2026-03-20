@@ -72,7 +72,6 @@ export default function Home() {
           <LegionExperiences />
           <CompanyNews />
           <Partnership />
-          <Partner />
           <Contact />
           <FAQ />
           <WorkWithUs />
