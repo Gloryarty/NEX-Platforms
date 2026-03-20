@@ -19,7 +19,7 @@ import {usePathname} from "next/navigation"
 
 export default function Hero({ data }) {
   const pathName = usePathname()
-  const url = useMemo(() => `https://legionmain.netlify.app${pathName}`, [pathName])
+  const url = useMemo(() => `https://gloryarty.github.io/NEX-Platforms${pathName}`, [pathName])
   const subject = useMemo(() => `${data?.pageType}: ${data?.shortTitle !== "blank" ? data?.shortTitle : data?.title}`, [data])
 
   const [isCopied, setIsCopied] = useState(false);

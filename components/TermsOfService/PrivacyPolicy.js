@@ -9,7 +9,7 @@ export default function PrivacyPolicy() {
         relationship with you, and we are committed to protecting your personal
         information in accordance with applicable laws and regulations.{" "}
         <br></br>Our Privacy Policy applies to all of our websites, including
-        https://plundur.io, https://legionplatforms.com, the NEX Platforms Portal,
+        https://plundur.io, https://nexplatforms.com, the NEX Platforms Portal,
         NEX Platforms Distribution, and https://CrazyRun.io, as well as any other
         products or services we may offer.
       </div>

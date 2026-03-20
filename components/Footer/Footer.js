@@ -56,7 +56,7 @@ export default function Footer() {
               className="ri-youtube-fill youtube icon"
               onClick={() =>
                 handleClick(
-                  "https://youtube.com/@legion-platforms?si=d06ilR8CiDkNJsQd"
+                  "#"
                 )
               }
             ></i>

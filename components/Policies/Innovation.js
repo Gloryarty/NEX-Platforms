@@ -13,7 +13,7 @@ export default function Innovation() {
         restrictions. NEX Platforms aims to break down barriers in gaming,
         making it possible for people who have never had the opportunity to play
         to experience the joy of immersive, multiplayer worlds. Through this
-        commitment to inclusivity, Legion is not just creating games; it&apos;s
+        commitment to inclusivity, NEX Platforms is not just creating games; it&apos;s
         building bridges that connect people across demographics, abilities, and
         backgrounds, allowing anyone to dive into the world of gaming and be
         part of a global community. NEX Platforms is committed to leveraging

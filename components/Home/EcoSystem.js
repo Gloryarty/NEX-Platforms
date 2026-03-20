@@ -71,7 +71,7 @@ export default function EcoSystem() {
               <button className="disabled">Coming Soon</button>
               {/* <button
                 onClick={() =>
-                  handleClick("https://legionplatforms.com/portal")
+                  handleClick("https://nexplatforms.com/portal")
                 }
               >
                 Explore
@@ -106,7 +106,7 @@ export default function EcoSystem() {
               <button className="disabled">Coming Soon</button>
               {/* <button
                 onClick={() =>
-                  handleClick("https://legionplatforms.com/distribution/")
+                  handleClick("https://nexplatforms.com/distribution/")
                 }
               >
                 Explore
@@ -141,7 +141,7 @@ export default function EcoSystem() {
               <button className="disabled">Coming Soon</button>
               {/* <button
                 onClick={() =>
-                  handleClick("https://legionplatforms.com/publishing")
+                  handleClick("https://nexplatforms.com/publishing")
                 }
               >
                 Explore
@@ -178,7 +178,7 @@ export default function EcoSystem() {
               <button className="disabled">Coming Soon</button>
               {/* <button
                 onClick={() =>
-                  handleClick("https://legionplatforms.com/advertising")
+                  handleClick("https://nexplatforms.com/advertising")
                 }
               >
                 Explore

@@ -46,14 +46,14 @@ export default function TermsOfServiceSection() {
       <div className="info">
         Every single 3D model, sound, line of code, art piece, logo, in
         Plundur.io is fully owned and protected by NEX Platforms. We do
-        not allow third party use unless given permission to do so by Legion
+        not allow third party use unless given permission to do so by NEX Platforms
         Platforms. If anything in Plundur.io is used without permission, legal
         action can and will be taken.
       </div>
       <div className="head">4. Partners</div>
       <div className="info">
         We grant exclusive rights to our partners which are not availible to
-        regular website users, these partners are decided by the Legion
+        regular website users, these partners are decided by NEX Platforms
         Platforms LLC team.
       </div>
       <div className="head">5. Termination of Service</div>
