@@ -1,0 +1,298 @@
+.mobile-nav {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 4rem;
+    background: var(--legion-nav-bg);
+    backdrop-filter: blur(5px);
+    padding: 1rem .7rem;
+    box-shadow: 0 5px 20px -5px rgb(0 0 0 / 7%);
+    z-index: 11;
+
+    .logo {
+        img {
+            width: 1.2rem;
+            height: auto;
+        }
+
+        display: flex;
+        align-items: center;
+        gap: .5rem;
+        font-size: 1.2rem;
+        font-weight: 700;
+        white-space: nowrap;
+        user-select: none;
+        cursor: pointer;
+    }
+
+    .right-bar {
+        margin-left: auto;
+        display: flex;
+        align-items: center;
+        gap: .7rem;
+    }
+
+    .search {
+        position: relative;
+        color: var(--sub-text);
+        margin-right: -1.4rem;
+
+        i {
+            margin-left: .7rem;
+            top: 50%;
+            transform: translateY(-50%);
+            position: absolute;
+        }
+
+        input {
+            box-shadow: 0 5px 20px -5px rgb(0 0 0 / 7%);
+            padding: .6rem 2.2rem;
+            padding-right: .7rem;
+            border: 1px solid var(--legion-searchbox-outline);
+            border-radius: 7px;
+            font-weight: 500;
+            letter-spacing: .6px;
+            max-width: 20rem;
+            min-width: 1rem;
+            width: calc(100% - 1.2rem);
+            background: var(--background);
+            color: var(--text);
+
+            &:focus-within{
+                outline: none;
+                border-color: var(--accent);
+            }
+        }
+    }
+
+
+    .nav-btn {
+        background: #FFB502;
+        color: black;
+        font-weight: 600;
+        padding: .50rem .9rem;
+        border-radius: 7px;
+        font-size: 1rem;
+        cursor: pointer;
+        user-select: none;
+        transition: transform 300ms, color 300ms, background 300ms, filter 300ms;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: .6rem;
+
+        &:hover {
+            filter: contrast(1.2);
+        }
+
+        &:active {
+            transform: scale(.9);
+        }
+    }
+
+    .mode-btn {
+        aspect-ratio: 1 / 1;
+        padding: .8rem;
+        background: var(--background);
+        color: var(--text);
+        border: 1px solid var(--legion-searchbox-outline);
+    }
+
+
+    .mobile-search {
+        position: fixed;
+        left: 50%;
+        transform: translateX(-50%);
+        top: 4.5rem;
+        width: calc(100% - 2rem);
+        margin: 0 !important;
+        padding: 0;
+
+        input {
+            max-width: unset;
+            width: 100%;
+            height: 3rem;
+        }
+
+        .searchResults {
+            width: 100%;
+        }
+    }
+
+    .mobile-expanded-nav {
+        position: fixed;
+        background: var(--background);
+        top: 4rem;
+        left: 0;
+        right: 0;
+        padding: .7rem;
+        z-index: 111111;
+        isolation: isolate;
+
+        
+        max-height: calc(100vh - 10rem);
+        
+
+        .sub-wrapper {
+            max-height: calc(100vh - 12rem);
+            overflow-y: auto;
+            padding-bottom: 0rem !important;
+            display: flex;
+            flex-direction: column;
+            gap: .7rem;
+        }
+
+        .mobile-nav-item {
+            display: flex;
+            flex-direction: column;
+            font-weight: 500;
+            margin-left: 0rem;
+
+            .header {
+                display: flex;
+                width: 100%;
+                justify-content: space-between;
+                .title {
+                    position: relative;
+                    cursor: pointer;
+                    font-size: 1rem;
+                    letter-spacing: .7px;
+                    font-weight: 700;
+                }
+                i {
+                    user-select: none;
+                    font-size: 2rem;
+                }
+            }
+
+            // &:hover {
+            //     .nav-item-expanded {
+            //         display: block !important;
+            //     }
+            // }
+
+            .nav-item-expanded {
+                display: block !important;
+            }
+
+            .products {
+                display: flex;
+                flex-direction: column;
+                gap: 2rem;
+                padding-bottom: 2rem;
+
+                &:first-child {
+                    margin-top: .5rem;
+                }
+                
+                section.products-section {
+                    display: flex;
+                    flex-direction: column;
+            
+                    .products-title {
+                        position: relative;
+                        font-weight: 900;
+                        font-size: .7rem;
+                        letter-spacing: .8px;
+                        margin-bottom: .6rem;
+                        text-transform: uppercase;
+                        opacity: .7;
+                        margin-bottom: 1rem;
+
+                        &::after {
+                            content: '';
+                            position: absolute;
+                            left: 0;
+                            bottom: -.2rem;
+                            width: 1rem;
+                            height: 2px;
+                            background: var(--text);
+                            opacity: .7;
+                            
+                        }
+                    }
+
+                    .item-list {
+                        display: flex;
+                        flex-direction: column;
+                        gap: 1.1rem;
+
+                        .item {
+                            display: flex;
+                            align-items: center;
+                            gap: 1rem;
+
+                            .icoCont {
+                                width: 2.5rem;
+                                height: 2.5rem;
+                                border-radius: 5px;
+                                background: var(--legion-nav-item-bg);
+                                background-position: center;
+                                background-size: cover;
+                            }
+
+                            .infoCont {
+                                display: flex;
+                                flex-direction: column;
+
+                                .infoTitle {
+                                    font-weight: 600;
+                                    font-size: .9rem;
+                                    opacity: .8;
+                                    cursor: pointer;
+
+                                    &:hover {
+                                        text-decoration: underline;
+                                    }
+                                }
+
+                                .infoDetail {
+                                    font-weight: 500;
+                                    font-size: .7rem;
+                                    letter-spacing: .7px;
+                                    opacity: .6;
+                                }
+                            }
+                        }
+
+
+                    }
+                }
+            }
+
+            .onlyTextItems {
+                gap: .7rem;
+                .products-title {
+                    display: none !important;
+                }
+
+                .item-list {
+                    gap: .7rem !important;
+
+                    .infoTitle {
+                        font-size: .8rem !important;
+                        letter-spacing: .5px !important;
+                    }
+                }
+            }
+
+
+        }
+    }
+}
+
+@media only screen and (min-width: 600px) {
+    .mobile-search, .search-btn {
+        display: none !important;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .mobile-semi-search {
+        display: none;
+    }
+}

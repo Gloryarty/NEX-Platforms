@@ -1,0 +1,227 @@
+.carousel.extraPaddingFix {
+  padding-top: 4rem !important;
+}
+
+.carousel {
+  position: relative;
+  display: grid;
+  gap: .8rem;
+  width: 100%;
+
+  &::after {
+    position: absolute;
+    content: '';
+    background: var(--background);
+    inset: 0;
+    width: 100vw;
+    margin: auto;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: -1;
+}
+
+  .actions {
+    display: flex;
+    gap: 1rem;
+    justify-content: flex-end;
+    i {
+      padding: .5rem;
+      background: var(--legion-background-card-bg);
+      display: grid;
+      place-content: center;
+      border-radius: 100px;
+      font-weight: bolder;
+      font-size: 1.5rem;
+      transition: transform 200ms, color 200ms, background 200ms;
+
+      &:hover {
+        transform: scale(1.1);
+        background: var(--text);
+        color: var(--background);
+      }
+
+      &:active {
+        transform: scale(.7);
+      }
+    }
+
+    .title {
+      margin-right: auto;
+    }
+  }
+
+  .card-list {
+    display: flex;
+    gap: 1.5rem;
+    height: auto;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+
+
+    &::-webkit-scrollbar {
+      display: none;
+      /* for Chrome, Safari, and Opera */
+    }
+
+
+    .card {
+      width: 15rem;
+      height: 100%;
+      min-height: 17rem;
+      display: flex;
+      flex-direction: column;
+      gap: .5rem;
+      background: var(--legion-background-card-bg);
+      align-items: flex-start;
+      padding-bottom: 1rem;
+      border-radius: 7px;
+
+      &:hover {
+        background: var(--legion-bg-hover);
+        .card-bg {
+          transform: scale(1.05);
+        }
+      }
+
+      .imageCont {
+        width: inherit;
+        height: 8rem;
+        overflow: hidden;
+        border-top-left-radius: 7px;
+        border-top-right-radius: 7px;
+
+        .card-bg {
+          width: inherit;
+          height: 8rem;
+          object-fit: cover;
+          border-top-left-radius: 7px;
+          border-top-right-radius: 7px;
+          transition: transform 700ms;
+        }
+      }
+
+
+      
+
+      .title-cont {
+        display: flex;
+        align-items: center;
+        gap: .5rem;
+        padding: 0rem .5rem;
+
+        img {
+          width: 1.8rem;
+          height: 1.8rem;
+          border-radius: 4px;
+          object-fit: cover;
+        }
+
+        .card-title {
+          font-size: 1.1rem;
+          font-weight: 700;
+        }
+      }
+
+      // .info {
+      //   padding: 0rem .5rem;
+      //   font-weight: 400;
+      //   font-size: .8rem;
+      // }
+
+      .card-btn {
+        margin: .5rem;
+        border: none;
+        background: rgb(21, 101, 221);
+        padding: .35rem .8rem;
+        color: white;
+        font-size: .9rem;
+        font-weight: 600;
+        letter-spacing: 1px;
+        border-radius: 100px;
+        min-width: 4.5rem;
+        cursor: pointer;
+        transition: transform 300ms, filter 300ms;
+
+        &:hover {
+          filter: brightness(1.1);
+          transform: translateY(-.1rem);
+        }
+
+        &:active {
+          filter: brightness(1.1);
+          transform: translateY(-.1rem) scale(.9);
+        }
+      }
+
+      .card-btn.disabled {
+        pointer-events: none;
+        background: var(--text);
+        opacity: .5;
+        color: var(--background);
+      }
+    }
+  }
+}
+
+
+@media only screen and (max-width: 600px) {
+  .carousel {
+    gap: 1.5rem;
+  
+    .actions {
+      display: flex;
+      gap: 1rem;
+      justify-content: flex-end;
+      align-items: flex-end;
+
+      .title {
+        font-size: 1.5rem;
+      }
+
+      i {
+        font-size: 1.4rem;
+        height: 2.5rem;
+        aspect-ratio: 1 / 1;
+      }
+    }
+  
+    .card-list {
+      height: auto;
+      .card {
+        width: 13rem;
+        min-height: 15.5rem;
+        padding-bottom: 1rem;
+  
+        .card-bg {
+          height: 7rem;
+        }
+  
+        .title-cont {
+          img {
+            width: 1.6rem;
+            height: 1.6rem;
+            border-radius: 4px;
+            object-fit: cover;
+          }
+  
+          .card-title {
+            font-size: 1rem;
+          }
+        }
+  
+        // .info {
+        //   font-size: .75rem;
+        // }
+  
+        .card-btn {
+          margin: .5rem;
+          padding: .3rem .4rem;
+          font-size: .8rem;
+          font-weight: 600;
+        }
+      }
+    }
+  }
+  
+
+}

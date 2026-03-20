@@ -1,0 +1,104 @@
+.search {
+    .touchBlocker {
+        position: fixed;
+        inset: 0;
+        width: 100vw;
+        height: 100vh;
+        background: transparent;
+        z-index: -1;
+    }
+
+    .searchResults {
+        z-index: 1;
+        position: absolute;
+        width: 2rem;
+        top: 2.6rem;
+        width: calc(100% - 1.2rem);
+        background: var(--background);
+
+        display: flex;
+        flex-direction: column;
+        gap: .4rem;
+        padding: .5rem 0rem;
+        max-height: 25rem;
+        overflow-y: auto;
+        border-bottom-right-radius: 7px;
+        border-bottom-left-radius: 7px;
+
+        .item {
+            cursor: pointer;
+            border-radius: 5px;
+            padding: .5rem 1rem;
+            user-select: none;
+
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            color: var(--text);
+            font-size: .85rem;
+            font-weight: 600;
+            letter-spacing: .2px;
+
+            .cover {
+                aspect-ratio: 1 / 1;
+                min-width: 2.2rem;
+                background-size: cover;
+                background-position: center;
+                border-radius: 4px;
+                background-color: var(--legion-nav-item-bg);
+            }
+
+            &:hover {
+                background: var(--legion-bg-hover);
+            }
+        }
+
+        .noResult {
+            justify-content: center;
+            pointer-events: none;
+            opacity: .4;
+        }
+
+        .viewAllGames {
+            background: var(--legion-sub-bg);
+            margin: 0rem .5rem;
+            justify-content: center;
+            transition: color 200ms, background 200ms, transform 200ms;
+
+            &:hover {
+                background: var(--accent);
+                color: white;
+            }
+
+            &:active {
+                transform: scale(.9);
+            }
+        }
+    }
+
+    .searchResults.hide {
+        display: none;
+    }
+
+    i {
+        z-index: 111111111;
+        position: absolute;
+        color: var(--text);
+        opacity: .5;
+
+        &.ri-search-line {
+            left: .8rem;
+        }
+
+        &.ri-close-line {
+            right: .8rem;
+            font-size: 1.2rem;
+        }
+    }
+
+    .searchInputMode {
+        border-bottom-right-radius: 0 !important;
+        border-bottom-left-radius: 0 !important;
+        border-bottom-color: var(--legion-nav-bg) !important;
+    }
+}

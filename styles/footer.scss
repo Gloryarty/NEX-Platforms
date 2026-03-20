@@ -1,0 +1,300 @@
+footer {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: .5rem 1rem;
+    padding-bottom: 0;
+    width: calc(100% - 1rem);
+    margin-top: -1rem;
+
+    &:after {
+        position: absolute;
+        content: '';
+        background: var(--legion-sub-bg);
+        inset: 0;
+        width: 100vw;
+        height: 100%;
+        margin: auto;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: -1;
+    }
+
+    .footerHero {
+        display: flex;
+        justify-content: space-between;
+        padding: 1rem;
+        margin: 1rem;
+        border-radius: 10px;
+        background: var(--background);
+
+        .lCont, .rCont {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .lCont {
+            display: flex;
+            flex-direction: column;
+            .logoCont {
+                display: flex;
+                align-items: center;
+                gap: .5rem;
+                font-size: 1.4rem;
+                font-weight: 800;
+                letter-spacing: .8px;
+
+                img {
+                    width: 1.5rem;
+                    height: auto;
+                }
+            }
+
+            .footerHeroTitle {
+                color: var(--text);
+                font-weight: 700;
+                font-size: 1rem;
+                opacity: .6;
+                margin-left: 1.93rem;
+            }
+
+            .location {
+                display: flex;
+                align-items: center;
+                gap: .4rem;
+                color: var(--sub-text);
+                font-size: .85rem;
+                letter-spacing: .8px;
+                margin-left: 1.8rem;
+                margin-top: .3rem;
+                i {
+                    color: var(--text);
+                    font-size: 1.2rem;
+                }
+            }
+            
+        }
+
+        .rCont {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+
+            button {
+                background: var(--legion-accent);
+                border: none;
+                padding: .5rem 1rem;
+                border-radius: 6px;
+                font-weight: 600;
+                letter-spacing: .7px;
+                font-size: .85rem;
+                transition: color 300ms, transform 300ms;
+
+                &:hover {
+                    transform: scale(1.05);
+                }
+
+                &:active {
+                    transform: scale(.9);
+                }
+            }
+
+            .contact-btn {
+                background: linear-gradient(to bottom right, rgb(255, 169, 39), rgb(255, 232, 20));
+            }
+
+            .partnership-btn {
+                background: linear-gradient(to bottom right, rgb(219, 196, 255), rgb(126, 90, 255));
+            }
+        }
+    }
+
+    .footerMain {
+        display: flex;
+        justify-content: space-evenly;
+        gap: 1rem;
+        flex-wrap: wrap;
+
+        section.footerSection {
+            display: flex;
+            flex-direction: column;
+
+            .header {
+                font-size: 1.1rem;
+                font-weight: 600;
+                letter-spacing: .6px;
+            }
+
+            .referenceHolder {
+                margin-top: .3rem;
+                display: flex;
+                flex-direction: column;
+                gap: .5rem;
+                font-size: .8rem;
+                letter-spacing: .3px;
+                font-weight: 500;
+                opacity: .9;
+
+                & > *:hover {
+                    cursor: pointer;
+                    text-decoration: underline;
+                }
+            }
+
+            &.social {
+                gap: .4rem;
+            }
+
+            .socialMedia {
+                display: flex;
+                gap: .7rem;
+                font-size: 1.8rem;
+
+                .icon {
+                    transition: color 300ms, transform 300ms;
+                }
+
+                .icon:hover {
+                    cursor: pointer;
+                    color: var(--sub-text);
+                    transform: translateY(-.3rem);
+                }
+
+                .twitter {
+                    color: #1D9BF0;
+                }
+
+                .youtube {
+                    color: #E52D27;
+                }
+
+                .discord {
+                    color: #7289DB;
+                }
+            }
+
+            .mainLogoCont {
+                display: flex;
+                align-items: center;
+                gap: .7rem;
+                margin-top: .3rem;
+
+                img {
+                    width: 1.8rem;
+                    height: auto;
+                    filter: var(--legion-footer-main-logo-cont);
+                    opacity: .25;
+                }
+
+               div {
+                font-size: .8rem;
+                font-weight: 700;
+                word-wrap: break-word;
+                width: 8ch;
+                line-height: 1.1rem;
+               }
+
+            }
+        }
+    }
+
+    .footerEnd {
+        position: relative;
+        text-align: center;
+        padding: 1rem 0rem;
+        font-weight: 700;
+        letter-spacing: .6px;
+        font-size: 1.2rem;
+        z-index: 1;
+
+        &:after {
+            position: absolute;
+            content: '';
+            background: var(--background);
+            inset: 0;
+            width: 100vw;
+            height: 100%;
+            margin: auto;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: -1;
+            isolation: isolate;
+        }
+    }
+}
+
+
+@media only screen and (max-width: 600px) {
+    footer {
+        gap: 1rem;
+        padding: .5rem 0rem;
+        width: calc(100% - 1rem);
+        margin-top: -1rem;
+        padding-bottom: 0rem;
+
+    
+        .footerHero {
+            padding: 1.5rem .5rem;
+            margin: 0rem;
+    
+            .lCont {
+                .logoCont {
+                    font-size: 1.2rem;
+    
+                    img {
+                        width: 1.3rem;
+                    }
+                }
+    
+                .footerHeroTitle {
+                    font-size: .9rem;
+                    margin-left: 1.78rem;
+                }
+    
+                .location {
+                    font-size: .8rem;
+                    i {
+                        font-size: 1rem;
+                    }
+                }
+                
+            }
+    
+            .rCont {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+    
+                button {
+                    padding: .4rem 1rem;
+                    font-size: .8rem;
+                }
+            }
+        }
+    
+        .footerMain {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            place-items: center;
+            align-items: flex-start;
+            padding: 0rem 1rem;
+            gap: 1rem;
+    
+            section.footerSection {
+                width: 100%;
+    
+                .header {
+                    font-size: 1.05rem;
+                }
+            }
+        }
+    
+        .footerEnd {
+            padding: .7rem 0rem;
+            font-size: .9rem;
+        }
+    }
+
+
+}

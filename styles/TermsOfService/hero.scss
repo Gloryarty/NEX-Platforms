@@ -1,0 +1,59 @@
+section.termsHero {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: .5rem;
+    padding: 5rem 0rem !important;
+
+    &:after {
+        position: absolute;
+        content: '';
+        background: linear-gradient(to bottom, #D9D95B, #D9A429);
+        inset: 0;
+        width: 100vw;
+        height: 100%;
+        margin: auto;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: -1;
+    }
+
+    .title {
+        color: white !important;
+        text-align: center;
+        font-size: 4rem !important;
+        font-weight: 700 !important;
+        letter-spacing: 1px;
+        line-height: 3.5rem;
+    }
+
+    .info {
+        color: rgb(240, 240, 240);
+        font-size: 1.3rem;
+        font-weight: 600;
+        letter-spacing: .5px;
+        text-align: center;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    section.termsHero {
+        gap: 0rem;
+        padding: 2rem 0rem !important;
+    
+        .title {
+            font-size: 2.4rem !important;
+            padding: 0rem 1rem;
+        }
+    
+        .info {
+            font-size: 1rem !important;
+        }
+
+        .sub-title {
+            font-size: 1.3rem !important;
+            margin-bottom: 0 !important;
+        }
+    }
+}

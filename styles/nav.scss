@@ -1,0 +1,310 @@
+@keyframes revealFromTop {
+    0% {
+        transform: translateY(-1rem);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.nav {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 4rem;
+    background: var(--legion-nav-bg);
+    backdrop-filter: blur(5px);
+    padding: 1rem 1rem;
+    box-shadow: 0 5px 20px -5px rgb(0 0 0 / 7%);
+    z-index: 11;
+
+    .logo {
+        img {
+            width: 1.6rem;
+            height: auto;
+        }
+
+        display: flex;
+        align-items: center;
+        gap: .5rem;
+        font-size: 1.4rem;
+        font-weight: 800;
+        min-width: 13.5rem;
+        white-space: nowrap;
+        user-select: none;
+        cursor: pointer;
+    }
+    .links {
+        display: flex;
+        gap: .5rem;
+    }
+
+    .nav-item{
+        display: flex;
+        font-weight: 500;
+        align-items: center;
+        margin-left: 1rem;
+        transition: color 200ms;
+
+        &:hover {
+            font-weight: 700;
+            &:nth-child(1) {
+                color: rgb(49, 34, 255);
+            }
+            &:nth-child(2) {
+                color: rgb(27, 180, 13);
+            }
+            &:nth-child(3) {
+                color: rgb(255, 27, 103);
+            }
+            .nav-item-expanded {
+                display: block;
+            }
+
+            .title {
+                &::after {
+                    pointer-events: all;
+                }
+            }
+        }
+
+        .title {
+            position: relative;
+            cursor: pointer;
+            font-size: .94rem;
+            letter-spacing: .7px;
+
+            &::after {
+                pointer-events: none;
+                cursor: auto;
+                content: '';
+                position: absolute;
+                inset: 0;
+                height: 5rem;
+                width: 100%;
+                background: transparent;
+                z-index: 1;
+            }
+        }
+        i {
+            user-select: none;
+            font-size: 1.7rem;
+        }
+
+        &.Company{
+            position: relative;
+            .nav-item-expanded {
+                // display: block;
+                position: absolute;
+                top: 1.8rem;
+                left: 50%;
+                transform: translateX(-50%) !important;
+                right: unset;
+                width: max-content;
+                
+                padding: 1rem;
+                padding-top: 1rem;
+                border-radius: 5px;
+                color: var(--text);
+            }
+        }
+
+        .nav-item-expanded {
+            display: none;
+            position: fixed;
+            top: 3rem;
+            left: 0;
+            right: 0;
+            padding: 1rem;
+            padding-top: 1rem;
+            border-radius: 5px;
+            color: var(--text);
+            animation: revealFromTop 200ms ease-in-out 1 forwards;
+            // background: red;
+            
+            .wrapper {
+                background: var(--background);
+                border: 1px solid rgba(0, 0, 0, 0.053);
+                min-height: 10rem;
+                padding: 1rem;
+                width: fit-content;
+                max-width: 1200px;
+                margin-left: auto;
+                margin-right: auto;
+                border-bottom-left-radius: 7px;
+                border-bottom-right-radius: 7px;
+                box-shadow: 0px 20px 20px rgba(0, 0, 0, 0.11);
+            }
+
+            .products {
+                display: flex;
+                gap: 3rem;
+                justify-content: center;
+                padding-bottom: 2rem;
+                
+                section.products-section {
+                    display: flex;
+                    flex-direction: column;
+            
+                    .products-title {
+                        font-weight: 700;
+                        font-size: .97rem;
+                        letter-spacing: .8px;
+                        margin-bottom: .6rem;
+                    }
+
+                    .item-list {
+                        display: flex;
+                        flex-direction: column;
+                        gap: .9rem;
+
+                        .item {
+                            display: flex;
+                            align-items: center;
+                            gap: .7rem;
+
+                            .icoCont {
+                                width: 1.8rem;
+                                height: 1.8rem;
+                                border-radius: 5px;
+                                background: var(--legion-nav-item-bg);
+                                background-position: center;
+                                background-size: cover;
+                            }
+
+                            .infoCont {
+                                display: flex;
+                                flex-direction: column;
+
+                                .infoTitle {
+                                    font-weight: 600;
+                                    font-size: .8rem;
+                                    opacity: .8;
+                                    cursor: pointer;
+
+                                    &:hover {
+                                        text-decoration: underline;
+                                    }
+                                }
+
+                                .infoDetail {
+                                    font-weight: 500;
+                                    font-size: .65rem;
+                                    letter-spacing: .7px;
+                                    opacity: .6;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            
+        }
+
+
+    }
+
+    .right-bar {
+        margin-left: auto;
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    .search {
+        position: relative;
+        color: var(--sub-text);
+        margin-right: -1.4rem;
+
+        i {
+            margin-left: .7rem;
+            top: 50%;
+            transform: translateY(-50%);
+            position: absolute;
+        }
+
+        input {
+            box-shadow: 0 5px 20px -5px rgb(0 0 0 / 7%);
+            padding: .6rem 2.2rem;
+            padding-right: .7rem;
+            border: 1px solid var(--legion-searchbox-outline);
+            border-radius: 7px;
+            font-weight: 500;
+            letter-spacing: .6px;
+            max-width: 20rem;
+            min-width: 1rem;
+            width: calc(100% - 1.2rem);
+            background: var(--background);
+            color: var(--text);
+
+            &:focus-within{
+                outline: none;
+                border-color: var(--accent);
+            }
+        }
+    }
+
+
+    .nav-btn {
+        background: #FFB502;
+        color: black;
+        font-weight: 600;
+        padding: .50rem .9rem;
+        border-radius: 7px;
+        font-size: 1rem;
+        cursor: pointer;
+        user-select: none;
+        transition: transform 300ms, color 300ms, background 300ms, filter 300ms;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: .6rem;
+
+        &:hover {
+            filter: contrast(1.2);
+        }
+
+        &:active {
+            transform: scale(.9);
+        }
+    }
+
+    .nav-contact {
+        background: linear-gradient(to bottom right, rgb(255, 169, 39), rgb(255, 232, 20));
+        // outline: 2px solid var(--legion-searchbox-outline);
+        // outline-offset: 2px;
+        border-radius: 7px;
+        padding: .5rem 1rem !important;
+    }
+
+    .mode-btn {
+        aspect-ratio: 1 / 1;
+        padding: .8rem;
+        background: var(--background);
+        color: var(--text);
+        border: 1px solid var(--legion-searchbox-outline);
+
+        &:hover {
+            background: var(--legion-accent);
+        }
+    }
+}
+
+
+@media only screen and (max-width: 1000px) {
+    .nav {
+        display: none;
+    }
+}
+
+@media only screen and (min-width: 1000px) {
+    .mobile-nav {
+        display: none !important;
+    }
+}

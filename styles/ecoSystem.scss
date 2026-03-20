@@ -1,0 +1,467 @@
+.legionEcoSystem {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    // min-height: 50rem;
+    gap: .5rem;
+    padding: 3rem 0rem !important;
+    padding-bottom: 7rem !important;
+    margin-bottom: -12rem;
+    
+    // &::after {
+    //     position: absolute;
+    //     content: '';
+    //     background: #010101;
+    //     background-image: url(https://cdn.discordapp.com/attachments/886692415572946984/1068819094033399828/Moon_Transparent_PNG_Clip_Art-639687983.png);
+    //     background-repeat: no-repeat;
+    //     background-position: center;
+    //     background-size: contain;
+    //     inset: 0;
+    //     width: 100vw;
+    //     margin: auto;
+    //     left: 50%;
+    //     transform: translateX(-50%);
+    //     z-index: -1;
+    // }
+
+    &::after {
+        position: absolute;
+        content: '';
+        background: #010101;
+        background-image: url('/res/ecosystem/bg.png');
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        inset: 0;
+        width: 100vw;
+        margin: auto;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: -1;
+    }
+
+
+    
+
+    &::before {
+        position: absolute;
+        content: '';
+        background: #0101014b;
+        inset: 0;
+        width: 100vw;
+        margin: auto;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: 1;
+    }
+
+    .title {
+        color: white !important;
+        text-align: center;
+        font-size: 3rem !important;
+        font-weight: 700 !important;
+        letter-spacing: 1px;
+        z-index: 2;
+
+        span {
+            background: linear-gradient(to bottom right,#cde3ff,#d997ff);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+    }
+
+    .info {
+        color: white;
+        font-size: 1.1rem;
+        letter-spacing: .5px;
+        text-align: center;
+        z-index: 2;
+        margin-bottom: 1rem;
+    }
+
+    & > button {
+        pointer-events: none;
+        opacity: 0;
+        padding: .7rem 1.7rem;
+        border: none;
+        border-radius: 100px;
+        font-weight: 700;
+        font-size: 1.2rem;
+        margin-top: 1rem;
+        margin-bottom: 2rem;
+        z-index: 2;
+
+        transition: color 200ms, background 200ms, transform 200ms;
+
+        &:hover {
+            transform: scale(1.05);
+        }
+
+        &:active {
+            transform: scale(.95);
+        }
+    }
+
+
+    .card-set {
+        position: relative;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: contain;
+        
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 1.5rem;
+        width: 100%;
+        // max-width: 600px;
+        padding-top: 2rem;
+        // padding-bottom: 12rem;
+        padding-bottom: 8rem;
+        // aspect-ratio: 1 / 1;
+
+        // &::after {
+        //     content: '';
+        //     position: absolute;
+        //     inset: 0;
+        //     background: rgba(0, 0, 0, 0.432);
+        //     z-index: 1;
+        // }
+
+        .cards {
+            display: flex;
+            gap: 1.5rem;
+            z-index: 2;
+            width: 100%;
+            padding: 0rem 1rem;
+
+            // Colors
+            &:nth-child(1) > div:nth-child(1){
+                background: linear-gradient(to bottom, #008A35, #008534);
+            }
+
+            &:nth-child(1) > div:nth-child(2){
+                background: linear-gradient(to bottom, #2562D3, #333AC2);
+            }
+
+            &:nth-child(1) > div:nth-child(3){
+                background: linear-gradient(to bottom, #6B24A3, #531D9C);
+            }
+
+            &:nth-child(2) > div:nth-child(1){
+                background: linear-gradient(to bottom, #99A2C7, #8197C1);
+            }
+
+            &:nth-child(2) > div:nth-child(2){
+                background: linear-gradient(to bottom, #75C6CC, #52BDC5);
+            }
+
+            &:nth-child(2) > div:nth-child(3){
+                background: linear-gradient(to bottom, #B6366C, #A73569);
+            }
+
+
+            .card {
+                width: 100%;
+                // aspect-ratio: 1 / 1.02;
+                border-radius: 7px;
+                padding: 1.2rem 1rem;
+                color: white;
+                box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.39);
+
+                &:hover {
+                    .one {
+                        transform: scale(1.4);
+                    }
+
+                    .two {
+                        transform: scale(.7);
+                    }
+                }
+
+                .logo {
+                    display: flex;
+                    gap: .8rem;
+                    font-weight: 600;
+                    letter-spacing: 1px;
+
+                    img {
+                        width: 1.25rem;
+                        object-fit: contain;
+                        // filter: brightness(0) invert(1);
+                    }
+                }
+
+                .content {
+                    margin: .8rem 0rem;
+                    font-weight: 600;
+                    font-size: 1.2rem;
+                    width: 100%;
+                }
+
+                button {
+                    border-radius: 100px;
+                    font-weight: 700;
+                    padding: .3rem 1rem;
+                    border: none;
+                    transition: color 200ms, background 200ms, transform 200ms;
+
+                    &:hover {
+                        transform: scale(1.05);
+                    }
+
+                    &:active {
+                        transform: scale(.95);
+                    }
+                }
+
+                .disabled {
+                    user-select: none;
+                    pointer-events: none;
+                    opacity: .8;
+                }
+
+                .last-set {
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: flex-start;
+                    flex-wrap: wrap;
+                    gap: 1rem;
+
+                    .rCont {
+                        margin-left: auto;
+                        display: flex;
+
+                        & > div > div {
+                            border-radius: 10px;
+                            background-position: center !important;
+                            background-size: contain !important;
+                        }
+
+                        .one {
+                            padding-top: 9vmin;
+                            transform-origin: bottom left;
+                            transition: transform 700ms;
+
+                            div {
+                                width: 6vmin;
+                                aspect-ratio: 1 / 1;
+                                background: var(--background);
+                            }
+                        }
+
+                        .two {
+                            transition: transform 700ms;
+                            transform-origin: top right;
+
+                            div {
+                                width: 8.5vmin;
+                                aspect-ratio: 1 / 1;
+                                background: var(--background);
+                            }
+                        }
+                    }
+
+                }
+
+            }
+        }
+    }
+}
+
+
+@media only screen and (max-width: 600px) {
+    .legionEcoSystem {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        // min-height: 50rem;
+        gap: .5rem;
+        padding: 3rem 0rem !important;
+        padding-bottom: 14rem !important;
+    
+        &::before {
+            position: absolute;
+            content: '';
+            background: #0101014b;
+            inset: 0;
+            width: 100vw;
+            margin: auto;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 1;
+        }
+    
+        .title {
+            font-size: 2.5rem !important;
+            padding: 0rem !important;
+        }
+    
+        .info {
+            margin-bottom: 1rem;
+            font-size: .9rem;
+            margin-bottom: .2rem;
+        }
+    
+        & > button {
+            padding: .5rem 1.5rem;
+            font-size: 1rem;
+            margin-top: 1rem;
+        }
+    
+    
+        .card-set {   
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 1rem;
+            width: 100%;
+            // max-width: 600px;
+            padding-top: 2rem;
+            padding-bottom: 1rem;
+    
+            .cards {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                gap: 1rem;
+                z-index: 2;
+    
+                // Colors
+                &:nth-child(1) > div:nth-child(1){
+                    background: linear-gradient(to bottom, #008A35, #008534);
+                }
+    
+                &:nth-child(1) > div:nth-child(2){
+                    background: linear-gradient(to bottom, #2562D3, #333AC2);
+                }
+    
+                &:nth-child(1) > div:nth-child(3){
+                    background: linear-gradient(to bottom, #6B24A3, #531D9C);
+                }
+    
+                &:nth-child(2) > div:nth-child(1){
+                    background: linear-gradient(to bottom, #99A2C7, #8197C1);
+                }
+    
+                &:nth-child(2) > div:nth-child(2){
+                    background: linear-gradient(to bottom, #75C6CC, #52BDC5);
+                }
+    
+                &:nth-child(2) > div:nth-child(3){
+                    background: linear-gradient(to bottom, #B6366C, #A73569);
+                }
+    
+    
+                .card {
+                    width: 100%;
+                    max-width: 20rem;
+                    // aspect-ratio: 14 / 15;
+                    border-radius: 7px;
+                    padding: 1.2rem 1rem;
+                    color: white;
+                    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.39);
+    
+                    .logo {
+                        display: flex;
+                        gap: .8rem;
+                        font-weight: 600;
+                        letter-spacing: 1px;
+    
+                        img {
+                            width: 1.25rem;
+                            object-fit: contain;
+                            // filter: brightness(0) invert(1);
+                        }
+                    }
+    
+                    .content {
+                        margin: .8rem 0rem;
+                        font-weight: 600;
+                        font-size: 1.2rem;
+                    }
+    
+                    button {
+                        border-radius: 100px;
+                        font-weight: 700;
+                        padding: .3rem 1rem;
+                        border: none;
+                        transition: color 200ms, background 200ms, transform 200ms;
+    
+                        &:hover {
+                            transform: scale(1.05);
+                        }
+    
+                        &:active {
+                            transform: scale(.95);
+                        }
+                    }
+    
+                    .last-set {
+                        display: flex;
+                        justify-content: space-between;
+                        align-items: flex-start;
+    
+                        .rCont {
+                            display: flex;
+    
+                            & > div > div {
+                                border-radius: 10px;
+                                background-position: center !important;
+                                background-size: contain !important;
+                            }
+    
+                            .one {
+                                padding-top: 4rem;
+    
+                                div {
+                                    width: 3rem;
+                                    aspect-ratio: 1 / 1;
+                                    background: red;
+                                }
+                            }
+    
+                            .two {
+    
+                                div {
+                                    width: 4rem;
+                                    aspect-ratio: 1 / 1;
+                                    background: black;
+                                }
+                            }
+                        }
+    
+                    }
+    
+                }
+            }
+        }
+    }
+
+    section.partnership {
+        .title {
+            font-size: 2.5rem !important;
+            padding: 0rem .5rem;
+        }
+    
+        .info {
+            margin-bottom: 1rem;
+            font-size: .9rem;
+            margin-bottom: .2rem;
+        }
+    
+        button {
+            padding: .5rem 1.5rem;
+            font-size: 1rem;
+            margin-top: 1rem;
+        }
+    }
+}

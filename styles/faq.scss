@@ -1,0 +1,121 @@
+@keyframes revealFaq {
+    0% {
+        opacity: 0;
+        transform: translateY(-1rem);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.faq {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: .5rem;
+    padding: 4rem 0rem !important;
+    width: 100%;
+
+    .title {
+        text-align: center;
+        font-size: 3rem !important;
+        font-weight: 700 !important;
+        letter-spacing: 1px;
+        line-height: 3.5rem;
+    }
+
+
+    .faq-list {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+
+        .faq-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+            
+            &:not(:last-child) {
+                .faq-item-cont {
+                    border-bottom: 1px solid var(--legion-border-bottom);
+                }
+            }
+        }
+
+        .faq-item-cont {
+            display: flex;
+            justify-content: space-between;
+            padding: 1.2rem .5rem;
+            width: calc(100% - 1rem);
+            border-radius: 7px;
+            cursor: pointer;
+            transition: background 300ms;
+
+
+            &:hover {
+                background: var(--legion-bg-hover);
+            }
+
+            .faq-title {
+                font-size: 1.3rem;
+                font-weight: 700;
+                letter-spacing: .4px;
+                user-select: none;
+            }
+
+            i {
+                font-size: 2rem;
+            }
+        }
+
+        .faq-info {
+            font-size: 1rem;
+            line-height: 1.7rem;
+            padding: 0rem .5rem;
+            width: calc(100% - 1rem);
+            animation: revealFaq 400ms ease forwards;
+        }
+
+        .noBorder {
+            border: none !important;
+        }
+    }
+
+
+
+}
+
+
+@media only screen and (max-width: 600px) {
+    .faq {
+        padding: 1rem 0rem !important;
+    
+        .title {
+            font-size: 2.5rem !important;
+        }
+    
+        .faq-list {
+            .faq-item-cont {
+                padding: .8rem .5rem;
+
+                .faq-title {
+                    font-size: 1.1rem;
+                }
+    
+                i {
+                    font-size: 1.5rem;
+                }
+            }
+    
+            .faq-info {
+                font-size: .9rem;
+                line-height: 1.9rem;
+                letter-spacing: .7px;
+            }
+        }
+    }
+
+}

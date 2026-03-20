@@ -1,0 +1,183 @@
+section.scopedItemSection {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: .5rem;
+    padding: 4rem 0rem !important;
+    padding-top: 2rem !important;
+
+
+    .scopedItems {
+        display: grid;
+        width: 100%;
+        height: 60rem;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+        gap: 1rem;
+
+        .scopedItem {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            border: 7px solid var(--background2);
+            background: var(--background);
+            border-radius: 10px;
+            box-shadow: 0px 20px 20px rgba(0, 0, 0, 0.11);
+            z-index: 1;
+
+            &:first-child {
+                grid-column: 1 / span 2;
+            }
+
+            &:last-child {
+                grid-column: 2 / span 2;
+            }
+
+
+            img {
+                position: absolute;
+                inset: 0;
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                border-radius: 7px;
+                z-index: -1;
+            }
+
+            &:hover {
+                .detailsCont {
+                    .card-info {
+                        min-height: 2rem;
+                        opacity: 1;
+                    }
+                }
+            }
+
+            .detailsCont {
+                position: absolute;
+                bottom: 0;
+                display: flex;
+                flex-direction: column;
+                
+                width: 100%;
+                background: var(--legion-scoped-item-bg);
+                backdrop-filter: blur(10px);
+                padding: .5rem;
+
+                .card-title {
+                    font-weight: 700;
+                    font-size: 1.7rem;
+                }
+
+                .card-info {
+                    font-weight: 600;
+                    font-size: .9rem;
+                    letter-spacing: .4px;
+                    opacity: .8;
+                    opacity: 0;
+                    height: 0;
+                    min-height: 0rem;
+                    transition: min-height 300ms, opacity 300ms;
+                }
+
+                .actionCont {
+                    display: flex;
+                    justify-content: flex-end;
+                    flex-wrap: wrap;
+                    margin-top: .8rem;
+                    gap: .5rem;
+                    width: 100%;
+
+                    button {
+                        background: var(--legion-scoped-btn-bg);
+                        border: 2px solid var(--legion-scoped-btn-outline);
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        gap: .2rem;
+                        padding: .4rem .8rem;
+                        border-radius: 100px;
+                        min-width: 6rem;
+                        color: var(--text);
+
+                        font-weight: 700;
+                        font-size: .9rem;
+                        transition: color 300ms, background 300ms;
+
+                        i {
+                            font-size: 1.2rem;
+                        }
+
+                        &:hover {
+                            background: black;
+                            color: rgba(255, 255, 255, 0.884);
+                        }
+                    }
+
+                    .disabled {
+                        pointer-events: none;
+                        opacity: .7;
+                    }
+                }
+            }
+
+
+        }
+    }
+}
+
+
+@media only screen and (max-width: 600px) {
+    section.scopedItemSection {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: .5rem;
+        padding: 1rem 0rem !important;
+    
+        .scopedItems {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            height: fit-content;
+            gap: 1rem;
+    
+            .scopedItem {
+                width: 100%;
+                aspect-ratio: 16 / 12;
+    
+                .detailsCont {
+                    .card-title {
+                        font-size: 1.4rem;
+                    }
+    
+                    .card-info {
+                        font-size: .8rem;
+                    }
+    
+                    .actionCont {
+                        margin-top: 0rem;
+                        gap: .5rem;
+
+                        button {
+                            border: 1px solid var(--legion-scoped-btn-outline);
+                            gap: .2rem;
+                            padding: .4rem .8rem;
+                            min-width: 5rem;
+                            font-size: .8rem;
+
+                            i {
+                                font-size: 1rem;
+                            }
+                        }
+                    }
+                }
+    
+    
+            }
+        }
+    }
+
+}

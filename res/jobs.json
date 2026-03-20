@@ -1,0 +1,20 @@
+[
+    {
+        "role": "Developer",
+        "type": "INTS|PART|FT",
+        "details": "Programming",
+        "location": "Remote"
+    },
+    {
+        "role": "Graphic Designer",
+        "type": "INTS|PART|FT",
+        "details": "Designing Art For Products",
+        "location": "Remote"
+    },
+    {
+        "role": "Human Resources",
+        "type": "INTS|PART|FT",
+        "details": "Managing HR",
+        "location": "Remote"
+    }
+]

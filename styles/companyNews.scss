@@ -1,0 +1,232 @@
+.companyNews {
+    margin-top: 3rem;
+    margin-bottom: 5rem;
+    .title {
+        text-align: center;
+        font-size: 3rem !important;
+        font-weight: 800 !important;
+        margin-bottom: 2rem;
+    }
+
+    .newsCont {
+        display: grid;
+        grid-template-columns: 1fr .6fr;
+        grid-template-rows: 1fr 1fr 1fr 2rem;
+        gap: 1rem;
+        height: 20rem;
+
+        & > div {
+            border-radius: 10px;
+            box-shadow: 0px 20px 20px rgba(0, 0, 0, 0.062);
+        }
+
+        button {
+            background: #086CE4;
+            color: white;
+            font-weight: 600;
+            font-size: 1rem;
+            height: 2rem;
+            border-radius: 10px;
+            border: none;
+            cursor: pointer;
+            transition: transform 300ms;
+
+            &:hover {
+                transform: scale(1.02);
+            }
+
+            &:active {
+                transform: scale(.9);
+            }
+        }
+
+        .bigNews {
+            position: relative;
+            background: var(--background);
+            grid-row: 1 / span 4;
+            grid-column: 1 / span 1;
+            overflow: hidden;
+            padding: 1rem;
+            z-index: 1;
+            display: flex;
+            align-items: flex-end;
+
+            &::before {
+                content: '';
+                position: absolute;
+                inset: 0;
+                background: linear-gradient(to bottom right, rgba(0, 0, 0, 0.226), transparent);
+                z-index: -1;
+            }
+
+            &::after {
+                content: '';
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 1.5rem;
+                height: 1.5rem;
+                background-image: url(https://cdn.discordapp.com/attachments/918131950106083378/1068795423600410684/logo.png);
+                background-position: center;
+                background-size: contain;
+                margin: 1rem;
+                filter: brightness(0) invert(1);
+            }
+
+            img {
+                position: absolute;
+                inset: 0;
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                z-index: -2;
+                transition: transform 700ms ease;
+            }
+
+            &:hover {
+                img {
+                    transform: scale(1.05);
+                }
+            }
+
+            .news-title {
+                z-index: 4;
+                font-size: 1.8rem;
+                font-weight: 700;
+                color: rgba(255, 255, 255, 0.856);
+                z-index: 12;
+                cursor: pointer;
+
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+
+            .news-type {
+                z-index: 4;
+                font-size: 1.2rem;
+                letter-spacing: 2px;
+                font-weight: 800;
+                color: rgba(255, 255, 255, 0.534);
+            }
+        }
+
+        .news {
+            position: relative;
+            background: var(--background2);
+            grid-column: 2 / span 1;
+            border-radius: 10px;
+            display: flex;
+            justify-content: space-between;
+            overflow: hidden;
+            transition: transform 400ms;
+
+            &::after {
+                content: '';
+                position: absolute;
+                top: 0;
+                right: 0;
+                width: 1rem;
+                height: 1rem;
+                background-image: url(https://cdn.discordapp.com/attachments/918131950106083378/1068795423600410684/logo.png);
+                background-position: center;
+                background-size: contain;
+                margin: .5rem;
+                filter: brightness(0) invert(1);
+            }
+
+            &:hover {
+                transform: scale(1.03);
+            }
+
+            img {
+                width: 10rem;
+                height: 100%;
+                object-fit: cover;
+            }
+
+            & > div {
+                padding: 1rem;
+                display: flex;
+                flex-direction: column;
+                gap: .2rem;
+                justify-content: center;
+
+                .news-title, .news-type {
+                    font-weight: 800;
+                }
+
+                .news-title {
+                    line-height: 1.4rem;
+                    max-width: 18ch;
+                    cursor: pointer;
+
+                    &:hover {
+                        text-decoration: underline;
+                    }
+                }
+
+                .news-type {
+                    opacity: .6;
+                    font-size: .8rem;
+                }
+            }
+        }
+    }
+}
+
+
+
+@media only screen and (max-width: 600px) {
+    .companyNews {
+        margin-top: 0rem;
+        margin-bottom: 1rem;
+        .title {
+            font-size: 2rem !important;
+        }
+    
+        .newsCont {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            height: auto;
+    
+            .bigNews {
+                padding: .5rem;
+                aspect-ratio: 16 / 9;
+    
+                .news-title {
+                    font-size: 1.4rem;
+                }
+    
+                .news-type {
+                    font-size: 1rem;
+                }
+            }
+    
+            .news {
+                justify-content: space-between;
+                height: fit-content;
+    
+                img {
+                    aspect-ratio: 16 / 9;
+                    height: 100%;
+                    object-fit: cover;
+                }
+    
+                & > div {
+                    padding: 1rem;
+
+                    .news-title {
+                        line-height: 1.2rem;
+                        font-size: .9rem;
+                    }
+    
+                    .news-type {
+                        font-size: .7rem;
+                    }
+                }
+            }
+        }
+    }
+}

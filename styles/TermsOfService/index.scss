@@ -1,0 +1,56 @@
+@keyframes revealTNC {
+    0% {
+        opacity: 0;
+        transform: translateY(-1rem);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+.termsofservice {
+    gap: 0 !important;
+    
+    .termsTextSet {
+        animation: revealFaq 400ms ease forwards;
+        padding: 1rem;
+        .info {
+            font-size: .9rem;
+            line-height: 1.7rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .head {
+            font-weight: 700;
+            font-size: 1.8rem;
+            margin-top: 2rem;
+            margin-bottom: .5rem;
+        }
+    }
+}
+
+
+@media only screen and (max-width: 600px) {
+    .termsofservice {
+        gap: 0 !important;
+        
+        .termsTextSet {
+            animation: revealFaq 400ms ease forwards;
+            padding: 1rem;
+            .info {
+                font-size: .9rem;
+                line-height: 1.7rem;
+                margin-bottom: 1.5rem;
+            }
+    
+            .head {
+                font-weight: 700;
+                font-size: 1.8rem;
+                margin-top: 2rem;
+                margin-bottom: .5rem;
+            }
+        }
+    }
+}

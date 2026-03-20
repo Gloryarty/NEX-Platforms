@@ -1,0 +1,192 @@
+.companyPageNews {
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+    .title {
+        text-align: center;
+        font-size: 3rem !important;
+        font-weight: 800 !important;
+        margin-bottom: 2rem;
+    }
+
+    .newsCont {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 1rem;
+
+        // & > div {
+        //     border-radius: 10px;
+        //     box-shadow: 0px 20px 20px rgba(0, 0, 0, 0.062);
+        // }
+
+        .news {
+            background: var(--background2);
+            // border-radius: 10px;
+            display: flex;
+            flex-direction: column;
+            transition: transform 400ms;
+            width: 100%;
+            overflow: hidden;
+
+            &:hover {
+                img {
+                    transform: scale(1.05);
+                }
+            }
+
+            .imageCont {
+                padding: 0;
+                width: 100%;
+                aspect-ratio: 16 / 9;
+                overflow: hidden;
+
+                img {
+                    width: 100%;
+                    aspect-ratio: 16 / 9;
+                    object-fit: cover;
+                    transition: transform 700ms;
+                }
+            }
+
+            
+
+            & > div {
+                padding: .5rem;
+                display: flex;
+                flex-direction: column;
+                gap: .2rem;
+                justify-content: center;
+
+                .info {
+                    color: var(--text);
+                    font-weight: 700;
+                    opacity: .5;
+                }
+
+                .news-title {
+                    font-weight: 700;
+                    padding-bottom: 1rem;
+                }
+
+                .news-title {
+                    line-height: 1.4rem;
+                    cursor: pointer;
+
+                    &:hover {
+                        text-decoration: underline;
+                    }
+                }
+            }
+        }
+    }
+
+    button {
+        padding: .5rem 1.7rem;
+        border: none;
+        border-radius: 100px;
+        font-weight: 600;
+        font-size: 1.2rem;
+        width: 15rem;
+        margin: auto;
+        margin-top: 1rem;
+        background: #086CE4;
+        color: white;
+        transition: transform 300ms;
+
+        &:hover {
+            transform: scale(1.1);
+        }
+
+        &:active {
+            transform: scale(.9);
+        }
+    }
+}
+
+
+
+@media only screen and (max-width: 600px) {
+    .companyPageNews {
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+        .title {
+            font-size: 2rem !important;
+        }
+    
+        .newsCont {
+            display: grid;
+            grid-template-columns: 1fr;
+            justify-content: center;
+            gap: 1rem;
+    
+            // & > div {
+            //     border-radius: 10px;
+            //     box-shadow: 0px 20px 20px rgba(0, 0, 0, 0.062);
+            // }
+    
+            .news {
+                background: var(--background2);
+                // border-radius: 10px;
+                display: flex;
+                flex-direction: column;
+                transition: transform 400ms;
+                width: 100%;
+                max-width: 20rem;
+                margin: auto;
+                overflow: hidden;
+    
+                img {
+                    width: 100%;
+                    aspect-ratio: 16 / 9;
+                    object-fit: cover;
+                }
+    
+                & > div {
+                    padding: .5rem;
+                    display: flex;
+                    flex-direction: column;
+                    gap: .2rem;
+                    justify-content: center;
+    
+                    .info {
+                        color: var(--text);
+                        font-weight: 700;
+                        opacity: .5;
+                    }
+    
+                    .news-title {
+                        font-weight: 700;
+                        padding-bottom: 1rem;
+                    }
+    
+                    .news-title {
+                        line-height: 1.4rem;
+                        cursor: pointer;
+    
+                        &:hover {
+                            text-decoration: underline;
+                        }
+                    }
+                }
+            }
+        }
+    
+        button {
+            padding: .5rem 1.5rem;
+            border: none;
+            border-radius: 100px;
+            font-weight: 600;
+            font-size: 1rem;
+            width: 12rem;
+            margin: auto;
+            margin-top: 1rem;
+    
+            &:hover {
+                transform: scale(1.1);
+            }
+    
+            &:active {
+                transform: scale(.9);
+            }
+        }
+    }
+}
