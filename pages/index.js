@@ -71,7 +71,6 @@ export default function Home() {
           <Contact />
           <FAQ />
           <WorkWithUs />
-          <Company />
           <Users />
           <Footer />
         </div>
