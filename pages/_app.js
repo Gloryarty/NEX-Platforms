@@ -29,29 +29,8 @@ import "../styles/Careers/index.scss";
 import "../components/Company/CompanyNews.scss";
 import "remixicon/fonts/remixicon.css";
 
-import { Barlow_Condensed, IBM_Plex_Sans } from "next/font/google";
-
-const bodyFont = IBM_Plex_Sans({
-  subsets: ["latin"],
-  weight: ["300", "400", "500", "600", "700"],
-  variable: "--font-body",
-});
-
-const displayFont = Barlow_Condensed({
-  subsets: ["latin"],
-  weight: ["400", "500", "600", "700", "800"],
-  variable: "--font-display",
-});
-
 export default function App({ Component, pageProps }) {
   return (
-    <div className={`${bodyFont.variable} ${displayFont.variable}`}>
-      <style jsx global>{`
-        html {
-          font-family: var(--font-body), sans-serif;
-        }
-      `}</style>
-      <Component {...pageProps} />
-    </div>
+    <Component {...pageProps} />
   );
 }
