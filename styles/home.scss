@@ -21,6 +21,7 @@ main {
     max-height: 430px;
     z-index: 1;
     object-fit: cover;
+    filter: saturate(1.05) contrast(1.05);
 }
 
 section.hero {
@@ -32,17 +33,6 @@ section.hero {
     align-items: center;
     justify-content: space-between;
     z-index: 1;
-
-    .heroBgLogo {
-        pointer-events: none;
-        position: absolute;
-        left: -50%;
-        // transform: translateX(50%);
-        filter: var(--legion-overlay);
-        opacity: .1;
-        z-index: -1;
-
-    }
 
     .title {
         color: white;
@@ -66,24 +56,24 @@ section.hero {
         margin: 1rem 0rem;
     }
     .heroBtn {
-        border: none;
-        padding: .5rem 1.3rem;
-        border-radius: 100px;
+        border: 1px solid #f8c22a;
+        padding: .7rem 1.5rem;
+        border-radius: 10px;
         font-weight: 700;
         min-width: 8rem;
-        font-size: 1.1rem;
-        color: var(--text);
-        background: var(--background);
-        transition: color 200ms, background 200ms, transform 200ms;
-
+        font-size: 1.05rem;
+        color: #0b0d12;
+        background: linear-gradient(90deg, #f8c22a, #d49b0b);
+        box-shadow: 0 10px 25px rgba(248, 194, 42, 0.25);
+        transition: all 200ms ease;
 
         &:hover {
-            background: var(--text);
-            color: var(--background);
+            transform: translateY(-2px);
+            box-shadow: 0 14px 28px rgba(248, 194, 42, 0.35);
         }
 
         &:active {
-            transform: scale(.9);
+            transform: scale(.97);
         }
     }
 
