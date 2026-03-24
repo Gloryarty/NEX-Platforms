@@ -40,7 +40,6 @@ export default function Home() {
         <Image className="heroBg" src={bg} alt="logo" />
         <div className="mainWrapper">
           <section className="hero">
-            <Image className="heroBgLogo" src={logo} alt="logo" />
             <div className="lCont">
               <div className="title">Experiences that matter.</div>
               <div className="subTitle">
