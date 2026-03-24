@@ -10,7 +10,7 @@
     .mainWrapper {
         display: flex;
         flex-direction: column;
-        gap: 2.5rem;
+        gap: .9rem;
         padding-top: 1.5rem;
         padding-bottom: 3rem;
     }
@@ -20,7 +20,7 @@
     position: absolute;
     inset: 0 0 auto;
     width: 100%;
-    height: 46rem;
+    height: 54rem;
     z-index: 0;
     object-fit: cover;
     filter: saturate(.85) brightness(.45) contrast(1.1);
@@ -30,10 +30,10 @@
 .heroShade {
     position: absolute;
     inset: 0 0 auto;
-    height: 46rem;
+    height: 54rem;
     width: 100%;
     background:
-        linear-gradient(180deg, rgba(7, 11, 15, 0.2) 0%, rgba(7, 11, 15, 0.78) 78%, var(--background) 100%),
+        linear-gradient(180deg, rgba(7, 11, 15, 0.2) 0%, rgba(7, 11, 15, 0.72) 70%, rgba(7, 11, 15, 0.94) 88%, var(--background) 100%),
         linear-gradient(90deg, rgba(7, 11, 15, 0.9) 0%, rgba(7, 11, 15, 0.48) 55%, rgba(7, 11, 15, 0.82) 100%);
     z-index: 0;
 }
@@ -53,7 +53,8 @@ section.hero {
     grid-template-columns: minmax(0, 1.2fr) minmax(320px, .8fr);
     gap: 2rem;
     align-items: end;
-    padding: 4rem 0 2rem;
+    padding: 4rem 0 4.5rem;
+    margin-bottom: -2.2rem;
 
     .heroCopy {
         display: flex;
@@ -104,10 +105,10 @@ section.hero {
 
     .title {
         color: #f2eee5;
-        font-size: clamp(4.2rem, 8vw, 7.8rem);
-        line-height: .88;
+        font-size: clamp(3.2rem, 6vw, 5.7rem);
+        line-height: .92;
         margin: 0 0 1rem;
-        max-width: 8ch;
+        max-width: 9ch;
         opacity: 0;
         animation: rise-in .9s ease .12s forwards;
         text-shadow: 0 10px 40px rgba(0, 0, 0, 0.38);
@@ -281,6 +282,7 @@ section.hero {
     grid-template-columns: minmax(0, .8fr) minmax(0, 1.2fr);
     gap: 1.5rem;
     align-items: start;
+    padding-top: .6rem;
 
     .stripIntro,
     .signalPanel {
@@ -569,7 +571,7 @@ section.hero {
 
     .heroBg,
     .heroShade {
-        height: 34rem;
+        height: 38rem;
     }
 
     section.hero {
