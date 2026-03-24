@@ -7,11 +7,9 @@ import Carousel from "../components/Home/Carousel";
 import CompanyNews from "../components/Home/CompanyNews";
 import Partnership from "../components/Home/Partnership";
 import Contact from "../components/Home/Contact";
-import Partner from "../components/Home/Partner";
 import FAQ from "../components/Home/FAQ";
 import Users from "../components/Home/Users";
 import Footer from "../components/Footer/Footer";
-import LegionExperiences from "../components/Home/LegionExperiences";
 import ScopedItems from "../components/Home/ScopedItems";
 import Nav from "../components/Nav";
 import WorkWithUs from "../components/Home/JoinOurTeam";
@@ -24,7 +22,7 @@ export default function Home() {
   const router = useRouter();
   const gotoExplore = () => {
     const elem = document.createElement("a");
-    elem.href = "#legionExperiences";
+    elem.href = "#";
     elem.click();
   };
   return (
@@ -68,7 +66,6 @@ export default function Home() {
           <section className="aSection">
             <Carousel2 />
           </section>
-          <LegionExperiences />
           <CompanyNews />
           <Partnership />
           <Contact />
