@@ -501,105 +501,239 @@ section.hero {
 }
 
 @media only screen and (max-width: 980px) {
-    section.hero,
-    .combatStrip,
-    .intelSection .intelGrid,
-    .signalSection {
-        grid-template-columns: 1fr;
-    }
-
     section.hero {
-        min-height: auto;
-        padding-top: 2.75rem;
+        min-height: 36rem;
+        grid-template-columns: minmax(0, 1.08fr) minmax(240px, .72fr);
+        gap: 1rem;
+        padding-top: 2.4rem;
     }
 
     section.hero .heroPanel {
-        justify-self: stretch;
-        max-width: none;
+        max-width: 21rem;
     }
 
-    .combatStrip .featureCard.large {
-        grid-column: auto;
-    }
-
-    .intelSection .intelLead {
-        min-height: 26rem;
-    }
-
-    .signalSection .signalActions {
-        flex-direction: row;
-        justify-content: flex-start;
-        flex-wrap: wrap;
-    }
-}
-
-@media only screen and (max-width: 700px) {
-    .homePage .mainWrapper {
-        gap: 1.5rem;
-        padding-top: .75rem;
-        padding-bottom: 2rem;
-    }
-
-    .heroBg,
-    .heroShade {
-        height: 41rem;
-    }
-
-    section.hero {
-        padding-top: 2rem;
-
-        .title {
-            font-size: clamp(3.2rem, 18vw, 5rem);
-            max-width: 100%;
-        }
-
-        .subTitle {
-            font-size: 1rem;
-        }
-
-        .heroStats {
-            grid-template-columns: 1fr;
-        }
+    .combatStrip {
+        grid-template-columns: minmax(0, .8fr) minmax(0, 1fr);
+        gap: 1rem;
     }
 
     .combatStrip .stripIntro,
     .combatStrip .featureCard,
     .signalSection,
     .signalPanel {
-        padding: 1.3rem;
+        padding: 1.35rem;
     }
 
     .combatStrip .stripCards {
-        grid-template-columns: 1fr;
+        gap: .8rem;
     }
 
-    .intelSection .sectionHeader {
-        align-items: flex-start;
-        flex-direction: column;
+    .combatStrip .featureCard {
+        min-height: 13rem;
+    }
+
+    .combatStrip .featureCard.large {
+        grid-column: 1 / span 2;
+        min-height: 15rem;
+    }
+
+    .intelSection .intelGrid {
+        grid-template-columns: minmax(0, 1fr) minmax(260px, .72fr);
+        gap: .8rem;
     }
 
     .intelSection .intelLead {
         min-height: 24rem;
     }
 
+    .intelSection .intelCard {
+        grid-template-columns: 6.8rem minmax(0, 1fr);
+    }
+
+    .signalSection {
+        grid-template-columns: minmax(0, 1fr) 220px;
+        gap: .8rem;
+    }
+
+    .signalSection .signalActions {
+        gap: .6rem;
+    }
+}
+
+@media only screen and (max-width: 700px) {
+    .homePage .mainWrapper {
+        gap: 1rem;
+        padding-top: .55rem;
+        padding-bottom: 2rem;
+    }
+
+    .heroBg,
+    .heroShade {
+        height: 34rem;
+    }
+
+    section.hero {
+        min-height: 28rem;
+        grid-template-columns: minmax(0, 1fr) 190px;
+        gap: .85rem;
+        padding-top: 1.55rem;
+
+        .title {
+            font-size: clamp(2.35rem, 8.2vw, 3.7rem);
+            max-width: 9ch;
+        }
+
+        .subTitle {
+            font-size: .88rem;
+            line-height: 1.45;
+        }
+
+        .heroStats {
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: .45rem;
+        }
+
+        .heroBadge {
+            font-size: .67rem;
+            padding: .35rem .55rem;
+        }
+
+        .eyebrow {
+            font-size: .72rem;
+            margin-bottom: .45rem;
+        }
+
+        .heroBtnSet {
+            gap: .55rem;
+            margin: .9rem 0;
+        }
+
+        .heroBtn {
+            min-width: 0;
+            padding: .7rem .8rem;
+            font-size: .8rem;
+        }
+
+        .statCard {
+            padding: .65rem .55rem;
+        }
+
+        .statCard .value {
+            font-size: 1.35rem;
+        }
+
+        .statCard .label {
+            font-size: .58rem;
+            letter-spacing: .06em;
+        }
+
+        .heroPanel {
+            max-width: 190px;
+            padding: .8rem;
+        }
+
+        .panelMedia {
+            min-height: 8rem;
+            margin-bottom: .7rem;
+        }
+
+        .panelTitle {
+            font-size: 1.2rem;
+        }
+
+        .panelText,
+        .panelList div {
+            font-size: .72rem;
+            line-height: 1.35;
+        }
+    }
+
+    .combatStrip {
+        grid-template-columns: minmax(0, .9fr) minmax(0, 1.1fr);
+        gap: .7rem;
+    }
+
+    .combatStrip .stripCards {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: .7rem;
+    }
+
+    .combatStrip .stripIntro,
+    .combatStrip .featureCard,
+    .signalSection,
+    .signalPanel {
+        padding: .95rem;
+    }
+
+    .combatStrip h2,
+    .intelSection .sectionHeader h2,
+    .signalSection h2 {
+        font-size: clamp(1.6rem, 5vw, 2.15rem);
+    }
+
+    .combatStrip .featureCard {
+        min-height: 10.5rem;
+    }
+
+    .combatStrip .featureCard.large {
+        min-height: 12rem;
+    }
+
+    .combatStrip .featureCard h3 {
+        font-size: 1.25rem;
+    }
+
+    .combatStrip p,
+    .signalSection p {
+        font-size: .78rem;
+        line-height: 1.45;
+    }
+
+    .intelSection .sectionHeader {
+        align-items: end;
+        flex-direction: row;
+    }
+
+    .intelSection .intelGrid {
+        grid-template-columns: minmax(0, 1fr) 220px;
+        gap: .7rem;
+    }
+
+    .intelSection .intelLead {
+        min-height: 19rem;
+    }
+
     .intelSection .intelOverlay,
     .intelSection .intelCard div {
-        padding: 1rem;
+        padding: .8rem;
+    }
+
+    .intelSection .intelOverlay h3 {
+        font-size: 1.7rem;
+    }
+
+    .intelSection .intelOverlay p {
+        font-size: .76rem;
+        line-height: 1.45;
     }
 
     .intelSection .intelCard {
-        grid-template-columns: 6.5rem minmax(0, 1fr);
+        grid-template-columns: 5.2rem minmax(0, 1fr);
+    }
 
-        h3 {
-            font-size: 1.2rem;
-        }
+    .intelSection .intelCard h3 {
+        font-size: .95rem;
     }
 
     .signalSection .signalActions {
         flex-direction: column;
+        justify-content: center;
 
         button {
             width: 100%;
+            min-width: 0;
+            padding: .75rem .7rem;
+            font-size: .78rem;
         }
     }
 }

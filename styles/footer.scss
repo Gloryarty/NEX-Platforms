@@ -240,11 +240,37 @@ footer {
 @media only screen and (max-width: 900px) {
     footer {
         .footerHero {
-            flex-direction: column;
+            flex-direction: row;
+            padding: 1rem;
         }
 
         .footerMain {
-            grid-template-columns: 1fr 1fr;
+            grid-template-columns: 1fr repeat(4, minmax(0, 1fr));
+            padding: 1rem;
+            gap: .7rem;
+        }
+
+        .footerHero .lCont .logoCont {
+            font-size: 1.35rem;
+        }
+
+        .footerHero .footerHeroTitle,
+        .footerHero .location {
+            font-size: .8rem;
+        }
+
+        .footerHero .rCont button {
+            padding: .55rem .85rem;
+            font-size: .82rem;
+        }
+
+        .footerMain section.footerSection .header {
+            font-size: .9rem;
+        }
+
+        .footerMain section.footerSection .referenceHolder {
+            gap: .45rem;
+            font-size: .68rem;
         }
     }
 }
@@ -257,58 +283,87 @@ footer {
         padding-bottom: 0rem;
 
         .footerHero {
-            padding: 1.2rem;
+            padding: .85rem;
             margin: 0rem;
-            flex-direction: column;
+            flex-direction: row;
+            align-items: center;
 
             .lCont {
                 .logoCont {
-                    font-size: 1.45rem;
+                    font-size: 1.05rem;
+                    gap: .35rem;
 
                     img {
-                        width: 1.3rem;
+                        width: 1rem;
                     }
                 }
 
                 .footerHeroTitle {
-                    font-size: .9rem;
-                    margin-left: 1.78rem;
+                    font-size: .72rem;
+                    margin-left: 1.35rem;
                 }
 
                 .location {
-                    font-size: .8rem;
+                    font-size: .65rem;
+                    margin-left: 1.25rem;
 
                     i {
-                        font-size: 1rem;
+                        font-size: .85rem;
                     }
                 }
             }
 
             .rCont {
+                width: auto;
+
                 button {
-                    padding: .65rem 1rem;
-                    font-size: .9rem;
+                    padding: .48rem .7rem;
+                    font-size: .68rem;
                 }
             }
         }
 
         .footerMain {
-            grid-template-columns: 1fr 1fr;
-            padding: 1.1rem;
-            gap: 1rem;
+            grid-template-columns: 1fr repeat(4, minmax(0, 1fr));
+            padding: .8rem;
+            gap: .55rem;
 
             section.footerSection {
                 width: 100%;
 
                 .header {
-                    font-size: 1.05rem;
+                    font-size: .74rem;
+                }
+
+                .referenceHolder {
+                    font-size: .58rem;
+                    gap: .35rem;
+                }
+
+                .socialMedia {
+                    font-size: 1rem;
+                    gap: .45rem;
+                }
+
+                .mainLogoCont {
+                    margin-top: .45rem;
+                    gap: .4rem;
+
+                    img {
+                        width: 1rem;
+                    }
+
+                    div {
+                        font-size: .55rem;
+                        line-height: .85rem;
+                    }
                 }
             }
         }
 
         .footerEnd {
-            padding: .85rem 0rem;
-            font-size: .9rem;
+            padding: .65rem 0rem;
+            font-size: .68rem;
         }
     }
 }
