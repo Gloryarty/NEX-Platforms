@@ -2,16 +2,16 @@ footer {
     position: relative;
     display: flex;
     flex-direction: column;
-    gap: 1rem;
+    gap: 1.25rem;
     padding: .5rem 1rem;
     padding-bottom: 0;
     width: calc(100% - 1rem);
-    margin-top: -1rem;
+    margin-top: 0;
 
     &:after {
         position: absolute;
-        content: '';
-        background: var(--legion-sub-bg);
+        content: "";
+        background: linear-gradient(180deg, #0c131b 0%, #091018 100%);
         inset: 0;
         width: 100vw;
         height: 100%;
@@ -24,10 +24,13 @@ footer {
     .footerHero {
         display: flex;
         justify-content: space-between;
-        padding: 1rem;
-        margin: 1rem;
-        border-radius: 10px;
-        background: var(--background);
+        gap: 1rem;
+        padding: 1.5rem;
+        margin: 0;
+        border: 1px solid var(--line);
+        background:
+            linear-gradient(90deg, rgba(12, 19, 27, .97) 0%, rgba(12, 19, 27, .82) 60%, rgba(12, 19, 27, .96) 100%),
+            url("/res/company_page_sub_section_hero.png") center/cover no-repeat;
 
         .lCont, .rCont {
             display: flex;
@@ -35,15 +38,15 @@ footer {
         }
 
         .lCont {
-            display: flex;
-            flex-direction: column;
             .logoCont {
                 display: flex;
                 align-items: center;
                 gap: .5rem;
-                font-size: 1.4rem;
-                font-weight: 800;
-                letter-spacing: .8px;
+                font-family: var(--display-font);
+                font-size: 1.8rem;
+                font-weight: 700;
+                letter-spacing: .06em;
+                text-transform: uppercase;
 
                 img {
                     width: 1.5rem;
@@ -52,11 +55,11 @@ footer {
             }
 
             .footerHeroTitle {
-                color: var(--text);
-                font-weight: 700;
-                font-size: 1rem;
-                opacity: .6;
-                margin-left: 1.93rem;
+                color: #d6dde8;
+                font-weight: 600;
+                font-size: 1.05rem;
+                opacity: .82;
+                margin-left: 1.98rem;
             }
 
             .location {
@@ -68,71 +71,80 @@ footer {
                 letter-spacing: .8px;
                 margin-left: 1.8rem;
                 margin-top: .3rem;
+
                 i {
                     color: var(--text);
                     font-size: 1.2rem;
                 }
             }
-            
         }
 
         .rCont {
             display: flex;
             flex-direction: column;
             justify-content: space-between;
+            gap: .75rem;
 
             button {
-                background: var(--legion-accent);
-                border: none;
-                padding: .5rem 1rem;
-                border-radius: 6px;
+                border: 1px solid transparent;
+                padding: .75rem 1.2rem;
+                font-family: var(--display-font);
                 font-weight: 600;
-                letter-spacing: .7px;
-                font-size: .85rem;
-                transition: color 300ms, transform 300ms;
+                letter-spacing: .08em;
+                text-transform: uppercase;
+                font-size: 1rem;
+                transition: color 300ms, transform 300ms, border-color 300ms, background 300ms;
 
                 &:hover {
-                    transform: scale(1.05);
+                    transform: translateY(-2px);
                 }
 
                 &:active {
-                    transform: scale(.9);
+                    transform: scale(.97);
                 }
             }
 
             .contact-btn {
-                background: linear-gradient(to bottom right, rgb(255, 169, 39), rgb(255, 232, 20));
+                background: linear-gradient(180deg, #efd28a 0%, #c39a48 100%);
+                color: #10161d;
+                border-color: #f0d9a2;
             }
 
             .partnership-btn {
-                background: linear-gradient(to bottom right, rgb(219, 196, 255), rgb(126, 90, 255));
+                background: transparent;
+                color: var(--text);
+                border-color: var(--line);
             }
         }
     }
 
     .footerMain {
-        display: flex;
-        justify-content: space-evenly;
+        display: grid;
+        grid-template-columns: 1.15fr repeat(4, minmax(0, 1fr));
         gap: 1rem;
-        flex-wrap: wrap;
+        padding: 1.5rem;
+        border: 1px solid var(--line);
+        background: rgba(10, 15, 22, 0.88);
 
         section.footerSection {
             display: flex;
             flex-direction: column;
 
             .header {
+                font-family: var(--display-font);
                 font-size: 1.1rem;
-                font-weight: 600;
-                letter-spacing: .6px;
+                font-weight: 700;
+                letter-spacing: .08em;
+                text-transform: uppercase;
             }
 
             .referenceHolder {
-                margin-top: .3rem;
+                margin-top: .5rem;
                 display: flex;
                 flex-direction: column;
-                gap: .5rem;
-                font-size: .8rem;
-                letter-spacing: .3px;
+                gap: .7rem;
+                font-size: .82rem;
+                letter-spacing: .04em;
                 font-weight: 500;
                 opacity: .9;
 
@@ -158,7 +170,7 @@ footer {
                 .icon:hover {
                     cursor: pointer;
                     color: var(--sub-text);
-                    transform: translateY(-.3rem);
+                    transform: translateY(-.2rem);
                 }
 
                 .twitter {
@@ -178,7 +190,7 @@ footer {
                 display: flex;
                 align-items: center;
                 gap: .7rem;
-                margin-top: .3rem;
+                margin-top: .8rem;
 
                 img {
                     width: 1.8rem;
@@ -187,14 +199,12 @@ footer {
                     opacity: .25;
                 }
 
-               div {
-                font-size: .8rem;
-                font-weight: 700;
-                word-wrap: break-word;
-                width: 8ch;
-                line-height: 1.1rem;
-               }
-
+                div {
+                    font-size: .8rem;
+                    font-weight: 700;
+                    width: auto;
+                    line-height: 1.1rem;
+                }
             }
         }
     }
@@ -202,15 +212,18 @@ footer {
     .footerEnd {
         position: relative;
         text-align: center;
-        padding: 1rem 0rem;
-        font-weight: 700;
-        letter-spacing: .6px;
-        font-size: 1.2rem;
+        padding: 1.1rem 0rem;
+        font-family: var(--display-font);
+        font-weight: 600;
+        letter-spacing: .08em;
+        text-transform: uppercase;
+        font-size: 1rem;
+        color: #b5c0cf;
         z-index: 1;
 
         &:after {
             position: absolute;
-            content: '';
+            content: "";
             background: var(--background);
             inset: 0;
             width: 100vw;
@@ -224,77 +237,78 @@ footer {
     }
 }
 
+@media only screen and (max-width: 900px) {
+    footer {
+        .footerHero {
+            flex-direction: column;
+        }
+
+        .footerMain {
+            grid-template-columns: 1fr 1fr;
+        }
+    }
+}
 
 @media only screen and (max-width: 600px) {
     footer {
         gap: 1rem;
         padding: .5rem 0rem;
         width: calc(100% - 1rem);
-        margin-top: -1rem;
         padding-bottom: 0rem;
 
-    
         .footerHero {
-            padding: 1.5rem .5rem;
+            padding: 1.2rem;
             margin: 0rem;
-    
+            flex-direction: column;
+
             .lCont {
                 .logoCont {
-                    font-size: 1.2rem;
-    
+                    font-size: 1.45rem;
+
                     img {
                         width: 1.3rem;
                     }
                 }
-    
+
                 .footerHeroTitle {
                     font-size: .9rem;
                     margin-left: 1.78rem;
                 }
-    
+
                 .location {
                     font-size: .8rem;
+
                     i {
                         font-size: 1rem;
                     }
                 }
-                
             }
-    
+
             .rCont {
-                display: flex;
-                flex-direction: column;
-                justify-content: space-between;
-    
                 button {
-                    padding: .4rem 1rem;
-                    font-size: .8rem;
+                    padding: .65rem 1rem;
+                    font-size: .9rem;
                 }
             }
         }
-    
+
         .footerMain {
-            display: grid;
             grid-template-columns: 1fr 1fr;
-            place-items: center;
-            align-items: flex-start;
-            padding: 0rem 1rem;
+            padding: 1.1rem;
             gap: 1rem;
-    
+
             section.footerSection {
                 width: 100%;
-    
+
                 .header {
                     font-size: 1.05rem;
                 }
             }
         }
-    
+
         .footerEnd {
-            padding: .7rem 0rem;
+            padding: .85rem 0rem;
             font-size: .9rem;
         }
     }
-
-
 }
