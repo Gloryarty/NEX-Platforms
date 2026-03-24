@@ -7,7 +7,6 @@ import ProductsDetails from "./Nav/ProductsDetails";
 import CompanyDetails from "./Nav/CompanyDetails";
 import ResourcesDetails from "./Nav/ResourcesDetails";
 import { useRouter } from "next/router";
-import Mode from "./Nav/Mode";
 import NavExpand from "./Nav/NavExpand";
 import { useState } from "react";
 import SearchMode from "./Nav/SearchMode";
@@ -34,7 +33,6 @@ export default function Nav() {
           </div>
           <div className="right-bar">
             <Search />
-            <Mode />
             <div
               onClick={() => router.push("/contact")}
               className="nav-btn nav-contact"
@@ -59,7 +57,6 @@ export default function Nav() {
           <div className="right-bar">
             {!expand && <Search className="mobile-semi-search" />}
             {!expand && <SearchMode setSearchMode={setMobileSearch} />}
-            <Mode />
             {!mobileSearch && (
               <NavExpand expand={expand} setExpand={setExpand} />
             )}
