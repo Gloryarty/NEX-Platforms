@@ -28,9 +28,12 @@ import "../styles/Games/index.scss";
 import "../styles/Careers/index.scss";
 import "../components/Company/CompanyNews.scss";
 import "remixicon/fonts/remixicon.css";
+import { LanguageProvider } from "../components/LanguageContext";
 
 export default function App({ Component, pageProps }) {
   return (
-    <Component {...pageProps} />
+    <LanguageProvider>
+      <Component {...pageProps} />
+    </LanguageProvider>
   );
 }

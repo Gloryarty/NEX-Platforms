@@ -58,6 +58,36 @@
         margin-left: auto;
         display: flex;
         align-items: center;
+        gap: .75rem;
+    }
+
+    .lang-switch {
+        display: flex;
+        align-items: center;
+        border: 1px solid #ffffff14;
+        background: rgba(11, 17, 24, 0.88);
+    }
+
+    .lang-btn {
+        border: none;
+        background: transparent;
+        color: #aeb8c7;
+        padding: .55rem .7rem;
+        font-family: var(--display-font);
+        font-size: .82rem;
+        letter-spacing: .1em;
+        text-transform: uppercase;
+        cursor: pointer;
+        transition: background 180ms ease, color 180ms ease;
+
+        &.active {
+            background: #ffffff10;
+            color: var(--text);
+        }
+
+        &:hover {
+            color: var(--text);
+        }
     }
 
     .nav-btn {
@@ -108,6 +138,11 @@
         .nav-btn {
             padding: .45rem .65rem;
             font-size: .72rem;
+        }
+
+        .lang-btn {
+            padding: .4rem .45rem;
+            font-size: .64rem;
         }
     }
 }
