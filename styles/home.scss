@@ -117,9 +117,7 @@ section.hero {
         flex-wrap: wrap;
     }
 
-    .heroBtn,
-    .armoryFeature button,
-    .communityActions button {
+    .heroBtn {
         border: 1px solid transparent;
         min-width: 11rem;
         padding: .95rem 1.35rem;
@@ -135,16 +133,13 @@ section.hero {
         }
     }
 
-    .heroBtn.primary,
-    .armoryFeature button,
-    .communityActions button:first-child {
+    .heroBtn.primary {
         color: #11161d;
         background: linear-gradient(180deg, #efd28a 0%, #c39a48 100%);
         border-color: #f0d9a2;
     }
 
-    .heroBtn.secondary,
-    .communityActions button:last-child {
+    .heroBtn.secondary {
         color: var(--text);
         background: rgba(14, 21, 29, 0.9);
         border-color: var(--line);
@@ -199,6 +194,36 @@ section.hero {
             font-size: .92rem;
         }
     }
+}
+
+.armoryFeature button,
+.communityActions button {
+    border: 1px solid transparent;
+    min-width: 11rem;
+    padding: .95rem 1.35rem;
+    font-family: var(--display-font);
+    font-size: 1rem;
+    letter-spacing: .08em;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: transform 180ms ease, border-color 180ms ease, background 180ms ease, color 180ms ease;
+
+    &:hover {
+        transform: translateY(-2px);
+    }
+}
+
+.armoryFeature button,
+.communityActions button:first-child {
+    color: #11161d;
+    background: linear-gradient(180deg, #efd28a 0%, #c39a48 100%);
+    border-color: #f0d9a2;
+}
+
+.communityActions button:last-child {
+    color: var(--text);
+    background: rgba(14, 21, 29, 0.9);
+    border-color: var(--line);
 }
 
 .statStrip {
