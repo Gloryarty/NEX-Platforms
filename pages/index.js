@@ -6,27 +6,12 @@ import Footer from "../components/Footer/Footer";
 import bg from "../res/BG.png";
 import logo from "../res/Logo.png";
 import gameLogo from "../res/Game_Logo.png";
-import g2 from "../res/g2_new.png";
-import g4 from "../res/g4_landscape.png";
-import g6 from "../res/g6.png";
 import deathmatchModeCover from "../res/Deathmatch_Mode_Cover.png";
 import rrArsenal from "../res/RR_Arsenal.png";
 import baseConfig from "../res/baseConfig.json";
 import news from "../res/news.json";
 
 const gameplayCards = [
-  {
-    tag: "Retake Mode",
-    title: "Fast entries, tighter sites, constant pressure.",
-    body: "Every round starts closer to impact. Attackers break space quickly, defenders retake under pressure, and the pace never drops.",
-    image: g4,
-  },
-  {
-    tag: "Precision Gunplay",
-    title: "Low noise. High lethality.",
-    body: "Weapons, silhouettes, and contrast are tuned for immediate readability so every peek and every flick matters.",
-    image: g2,
-  },
   {
     tag: "Deathmatch",
     title: "Warm up fast. Refrag faster.",

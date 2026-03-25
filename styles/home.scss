@@ -259,7 +259,7 @@ section.hero {
 
 .showcaseGrid {
     display: grid;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
+    grid-template-columns: 1fr;
     gap: 1rem;
 }
 
@@ -301,6 +301,22 @@ section.hero {
     margin: 0;
     color: #c8d1dc;
     line-height: 1.6;
+}
+
+.showcaseCard {
+    display: grid;
+    grid-template-columns: minmax(360px, .95fr) minmax(0, 1.05fr);
+
+    .cardImage {
+        min-height: 24rem;
+    }
+
+    .cardCopy {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 1.6rem;
+    }
 }
 
 .armoryFeature {
@@ -508,6 +524,10 @@ section.hero {
     .armoryFeature .armoryCopy h2,
     .communitySection .communityCopy h2 {
         font-size: clamp(2rem, 9vw, 2.8rem);
+    }
+
+    .showcaseCard {
+        grid-template-columns: 1fr;
     }
 
     .cardImage {
