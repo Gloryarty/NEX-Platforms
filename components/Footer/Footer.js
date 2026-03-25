@@ -13,7 +13,7 @@ export default function Footer() {
   };
   const copy = {
     en: {
-      brandHome: "RushRetake",
+      brandHome: "NEX Platforms",
       brandSite: "NEX Platforms",
       heroTitleHome: "Fast-paced tactical shooter by NEX Platforms.",
       heroTitleSite: "Games, updates, and platform news from NEX Platforms.",
@@ -50,7 +50,7 @@ export default function Footer() {
       rights: "All Rights Reserved.",
     },
     ru: {
-      brandHome: "RushRetake",
+      brandHome: "NEX Platforms",
       brandSite: "NEX Platforms",
       heroTitleHome: "Быстрый тактический шутер от NEX Platforms.",
       heroTitleSite: "Игры, обновления и новости платформы NEX Platforms.",
