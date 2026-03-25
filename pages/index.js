@@ -12,6 +12,7 @@ import g3 from "../res/g3.png";
 import g4 from "../res/g4_landscape.png";
 import g5 from "../res/g5.png";
 import g6 from "../res/g6.png";
+import rrArsenal from "../res/RR_Arsenal.png";
 import baseConfig from "../res/baseConfig.json";
 import news from "../res/news.json";
 
@@ -44,10 +45,10 @@ const arsenalCards = [
     image: g1,
   },
   {
-    tag: "Utility",
-    title: "Smoke the lane. Flash the retake.",
-    text: "Space control is the real weapon. Use utility to cut vision, isolate fights, and open the site.",
-    image: g5,
+    tag: "Armory",
+    title: "ARMORY",
+    text: "A dedicated weapon wall for RushRetake. Clean silhouettes, immediate recognition, and a presentation block that sells the loadout fantasy directly.",
+    image: rrArsenal,
   },
   {
     tag: "Momentum",
