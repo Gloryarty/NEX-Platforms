@@ -237,6 +237,17 @@ section.hero {
 .communitySection {
     padding: 1rem 0 0;
     background: linear-gradient(180deg, rgba(8, 12, 17, 0.97) 0%, rgba(8, 12, 17, 0.99) 100%);
+    isolation: isolate;
+
+    &::before {
+        content: "";
+        position: absolute;
+        inset: 0 auto 0 50%;
+        transform: translateX(-50%);
+        width: 100vw;
+        background: linear-gradient(180deg, rgba(8, 12, 17, 0.97) 0%, rgba(8, 12, 17, 0.99) 100%);
+        z-index: -1;
+    }
 }
 
 .sectionIntro,
