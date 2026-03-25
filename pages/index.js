@@ -6,11 +6,8 @@ import Footer from "../components/Footer/Footer";
 import bg from "../res/BG.png";
 import logo from "../res/Logo.png";
 import gameLogo from "../res/Game_Logo.png";
-import g1 from "../res/g1.png";
 import g2 from "../res/g2_new.png";
-import g3 from "../res/g3.png";
 import g4 from "../res/g4_landscape.png";
-import g5 from "../res/g5.png";
 import g6 from "../res/g6.png";
 import deathmatchModeCover from "../res/Deathmatch_Mode_Cover.png";
 import rrArsenal from "../res/RR_Arsenal.png";
@@ -35,27 +32,6 @@ const gameplayCards = [
     title: "Warm up fast. Refrag faster.",
     body: "Deathmatch keeps the guns hot between serious rounds: instant respawns, nonstop duels, and pure aim reps under pressure.",
     image: deathmatchModeCover,
-  },
-];
-
-const arsenalCards = [
-  {
-    tag: "Angles",
-    title: "Clear sightlines and brutal timing windows.",
-    text: "RushRetake is built around corners, swing timings, bombsite pressure, and last-second clears.",
-    image: g1,
-  },
-  {
-    tag: "Armory",
-    title: "ARMORY",
-    text: "A dedicated weapon wall for RushRetake. Clean silhouettes, immediate recognition, and a presentation block that sells the loadout fantasy directly.",
-    image: rrArsenal,
-  },
-  {
-    tag: "Momentum",
-    title: "The whole screen pushes forward.",
-    text: "Large-format art, hard overlays, and strong section transitions make the page feel like an active operation, not a brochure.",
-    image: g6,
   },
 ];
 
@@ -174,34 +150,21 @@ export default function Home() {
           </section>
 
           <section className="operationSection">
-            <div className="operationFeature">
-              <div className="featureVisual">
-                <Image src={g1} alt="RushRetake operation art" />
+            <article className="armoryFeature">
+              <div className="armoryImage">
+                <Image src={rrArsenal} alt="RushRetake armory" />
               </div>
-              <div className="featureCopy">
-                <span className="sectionLabel">Operation Brief</span>
-                <h2>One page, one game, one clear fantasy.</h2>
+              <div className="armoryCopy">
+                <span className="sectionLabel">Armory</span>
+                <h2>ARMORY</h2>
                 <p>
-                  This homepage is now centered on RushRetake itself: the live
-                  release, the play pattern, the visual identity, and the feeling
-                  of stepping into a round already in motion.
+                  A dedicated weapon wall for RushRetake. Clean silhouettes,
+                  immediate recognition, and a presentation block that sells the
+                  loadout fantasy directly.
                 </p>
-                <button onClick={() => router.push("/games")}>Enter The Match</button>
+                <button onClick={() => router.push("/games")}>Open Loadout</button>
               </div>
-            </div>
-
-            <div className="arsenalGrid">
-              {arsenalCards.map((card) => (
-                <article key={card.title} className="arsenalCard">
-                  <div className="arsenalImage">
-                    <Image src={card.image} alt={card.title} />
-                  </div>
-                  <span className="cardTag">{card.tag}</span>
-                  <h3>{card.title}</h3>
-                  <p>{card.text}</p>
-                </article>
-              ))}
-            </div>
+            </article>
           </section>
 
           <section className="intelSection" id="intel">

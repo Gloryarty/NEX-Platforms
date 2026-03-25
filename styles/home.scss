@@ -116,7 +116,7 @@ section.hero {
     }
 
     .heroBtn,
-    .operationFeature button,
+    .armoryFeature button,
     .communityActions button {
         border: 1px solid transparent;
         min-width: 11rem;
@@ -134,7 +134,7 @@ section.hero {
     }
 
     .heroBtn.primary,
-    .operationFeature button,
+    .armoryFeature button,
     .communityActions button:first-child {
         color: #11161d;
         background: linear-gradient(180deg, #efd28a 0%, #c39a48 100%);
@@ -264,15 +264,14 @@ section.hero {
 }
 
 .showcaseCard,
-.arsenalCard,
-.intelCard {
+.intelCard,
+.armoryFeature {
     border: 1px solid var(--line);
     background: linear-gradient(180deg, rgba(17, 25, 35, 0.94) 0%, rgba(10, 15, 22, 0.98) 100%);
     overflow: hidden;
 }
 
 .cardImage,
-.arsenalImage,
 .intelThumb {
     position: relative;
     min-height: 14rem;
@@ -286,13 +285,11 @@ section.hero {
 }
 
 .cardCopy,
-.arsenalCard,
 .intelCopy {
     padding: 1.2rem;
 }
 
 .showcaseCard h3,
-.arsenalCard h3,
 .intelCopy h3 {
     margin: .55rem 0;
     font-size: 1.8rem;
@@ -300,24 +297,22 @@ section.hero {
 }
 
 .showcaseCard p,
-.arsenalCard p,
 .intelCopy p {
     margin: 0;
     color: #c8d1dc;
     line-height: 1.6;
 }
 
-.operationFeature {
+.armoryFeature {
     display: grid;
     grid-template-columns: minmax(0, 1.1fr) minmax(320px, .9fr);
     gap: 1rem;
-    margin-bottom: 1rem;
+    align-items: stretch;
 
-    .featureVisual {
+    .armoryImage {
         position: relative;
         min-height: 30rem;
         overflow: hidden;
-        border: 1px solid var(--line);
         background: #0d141c;
 
         img {
@@ -327,12 +322,11 @@ section.hero {
         }
     }
 
-    .featureCopy {
+    .armoryCopy {
         display: flex;
         flex-direction: column;
         justify-content: center;
         padding: 2rem;
-        border: 1px solid var(--line);
         background:
             linear-gradient(180deg, rgba(18, 26, 36, 0.92) 0%, rgba(11, 16, 23, 0.98) 100%);
 
@@ -348,12 +342,6 @@ section.hero {
             line-height: 1.7;
         }
     }
-}
-
-.arsenalGrid {
-    display: grid;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-    gap: 1rem;
 }
 
 .intelLead {
@@ -439,13 +427,12 @@ section.hero {
     }
 
     section.hero,
-    .operationFeature,
+    .armoryFeature,
     .communitySection {
         grid-template-columns: 1fr;
     }
 
-    .showcaseGrid,
-    .arsenalGrid {
+    .showcaseGrid {
         grid-template-columns: 1fr;
     }
 
@@ -518,13 +505,12 @@ section.hero {
 
     .sectionIntro h2,
     .sectionHeader h2,
-    .operationFeature .featureCopy h2,
+    .armoryFeature .armoryCopy h2,
     .communitySection .communityCopy h2 {
         font-size: clamp(2rem, 9vw, 2.8rem);
     }
 
-    .cardImage,
-    .arsenalImage {
+    .cardImage {
         min-height: 10rem;
     }
 
@@ -545,15 +531,13 @@ section.hero {
     }
 
     .cardCopy,
-    .arsenalCard,
     .intelCopy,
-    .operationFeature .featureCopy,
+    .armoryFeature .armoryCopy,
     .communitySection {
         padding: 1rem;
     }
 
     .showcaseCard h3,
-    .arsenalCard h3,
     .intelCopy h3 {
         font-size: 1.35rem;
     }
