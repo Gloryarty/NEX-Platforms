@@ -238,7 +238,7 @@ export default function Home() {
 
             <div className="intelGrid">
               <article className="intelLead" onClick={() => router.push("/news")}>
-                <Image src={g4} alt="RushRetake live release" />
+                <Image src={bg} alt="RushRetake live release" />
                 <div className="intelOverlay">
                   <span>{launchNews?.date || "March 20, 2026"}</span>
                   <h3>{launchNews?.shortTitle || "RushRetake is live"}</h3>
