@@ -23,6 +23,9 @@ const gameplayCards = [
 export default function Home() {
   const router = useRouter();
   const launchNews = news[0];
+  const openTelegram = () => {
+    window.location.href = "https://t.me/RushRetake";
+  };
 
   const scrollToSection = (id) => {
     document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
@@ -59,7 +62,7 @@ export default function Home() {
                 makes you queue again immediately.
               </p>
               <div className="heroBtnSet">
-                <button onClick={() => router.push("/games")} className="heroBtn primary">
+                <button onClick={openTelegram} className="heroBtn primary">
                   Play Now
                 </button>
                 <button onClick={() => scrollToSection("modes")} className="heroBtn secondary">
@@ -157,7 +160,7 @@ export default function Home() {
               <h2>Launch, updates, and live signal.</h2>
             </div>
 
-            <article className="intelLead intelLeadWide" onClick={() => router.push("/news")}>
+            <article className="intelLead intelLeadWide">
               <Image src={bg} alt="RushRetake live release" />
               <div className="intelOverlay">
                 <span>{launchNews?.date || "March 20, 2026"}</span>
@@ -181,8 +184,8 @@ export default function Home() {
               </p>
             </div>
             <div className="communityActions">
-              <button onClick={() => router.push("/games")}>Play RushRetake</button>
-              <button onClick={() => router.push("/news")}>Read Launch Notes</button>
+              <button onClick={openTelegram}>Play RushRetake</button>
+              <button onClick={() => scrollToSection("intel")}>Latest Intel</button>
             </div>
           </section>
 

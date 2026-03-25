@@ -11,14 +11,17 @@ const homeNavItems = [
 
 const siteNavItems = [
   { title: "Home", href: "/" },
-  { title: "Games", href: "/games" },
-  { title: "News", href: "/news" },
-  { title: "Company", href: "/company" },
+  { title: "Careers", href: "/careers" },
+  { title: "Policies", href: "/policies" },
+  { title: "Privacy", href: "/privacy" },
 ];
 
 export default function Nav() {
   const router = useRouter();
   const isHome = router.pathname === "/";
+  const openTelegram = () => {
+    window.location.href = "https://t.me/RushRetake";
+  };
 
   const goToSection = (id) => {
     if (router.pathname !== "/") {
@@ -63,11 +66,11 @@ export default function Nav() {
 
         <div className="right-bar">
           <div
-            onClick={() => router.push(isHome ? "/games" : "/contact")}
+            onClick={() => (isHome ? openTelegram() : router.push("/help"))}
             className="nav-btn nav-contact"
           >
-            <i className={isHome ? "ri-sword-line" : "ri-mail-line"}></i>
-            {isHome ? "Play Now" : "Contact"}
+            <i className={isHome ? "ri-sword-line" : "ri-question-line"}></i>
+            {isHome ? "Play Now" : "Help"}
           </div>
         </div>
       </div>

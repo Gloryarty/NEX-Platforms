@@ -6,6 +6,9 @@ import baseConfig from "../../res/baseConfig.json";
 export default function Footer() {
   const router = useRouter();
   const isHome = router.pathname === "/";
+  const openTelegram = () => {
+    window.location.href = "https://t.me/RushRetake";
+  };
 
   const goToSection = (id) => {
     if (router.pathname !== "/") {
@@ -37,15 +40,15 @@ export default function Footer() {
         <div className="rCont">
           <button
             className="contact-btn"
-            onClick={() => router.push(isHome ? "/games" : "/contact")}
+            onClick={() => (isHome ? openTelegram() : router.push("/help"))}
           >
-            {isHome ? "Play Now" : "Contact"}
+            {isHome ? "Play Now" : "Help"}
           </button>
           <button
             className="partnership-btn"
-            onClick={() => router.push(isHome ? "/news" : "/news")}
+            onClick={() => (isHome ? goToSection("intel") : router.push("/privacy"))}
           >
-            {isHome ? "Launch Notes" : "News"}
+            {isHome ? "Latest Intel" : "Privacy"}
           </button>
         </div>
       </div>
@@ -63,9 +66,9 @@ export default function Footer() {
             ) : (
               <>
                 <div onClick={() => router.push("/")}>Home</div>
-                <div onClick={() => router.push("/games")}>Games</div>
-                <div onClick={() => router.push("/news")}>News</div>
-                <div onClick={() => router.push("/company")}>Company</div>
+                <div onClick={() => router.push("/careers")}>Careers</div>
+                <div onClick={() => router.push("/policies")}>Policies</div>
+                <div onClick={() => router.push("/privacy")}>Privacy</div>
               </>
             )}
           </div>
@@ -77,21 +80,21 @@ export default function Footer() {
         <section className="footerSection">
           <div className="header">{isHome ? "Play" : "Platform"}</div>
           <div className="referenceHolder">
-            <div onClick={() => router.push("/games")}>
-              {isHome ? "Open Game" : "Game Library"}
+            <div onClick={() => (isHome ? openTelegram() : router.push("/help"))}>
+              {isHome ? "Join Telegram" : "Help Center"}
             </div>
-            <div onClick={() => router.push("/news")}>
-              {isHome ? "Read Update" : "Press Releases"}
+            <div onClick={() => (isHome ? goToSection("intel") : router.push("/accessibility"))}>
+              {isHome ? "View Intel" : "Accessibility"}
             </div>
-            <div onClick={() => router.push("/contact")}>
-              {isHome ? "Contact Team" : "Contact Team"}
+            <div onClick={() => (isHome ? goToSection("community") : router.push("/innovation"))}>
+              {isHome ? "Community" : "Innovation"}
             </div>
           </div>
         </section>
         <section className="footerSection">
           <div className="header">Legal</div>
           <div className="referenceHolder">
-            <div onClick={() => router.push("/terms")}>Terms of service</div>
+            <div onClick={() => router.push("/legal")}>Legal</div>
             <div onClick={() => router.push("/privacy")}>Privacy</div>
             <div onClick={() => router.push("/security")}>Security</div>
           </div>
@@ -99,9 +102,9 @@ export default function Footer() {
         <section className="footerSection">
           <div className="header">Studio</div>
           <div className="referenceHolder">
-            <div onClick={() => router.push("/company")}>About NEX</div>
             <div onClick={() => router.push("/innovation")}>Innovation</div>
-            <div onClick={() => router.push("/contact")}>Support</div>
+            <div onClick={() => router.push("/playtesting")}>Playtesting</div>
+            <div onClick={() => router.push("/help")}>Support</div>
           </div>
         </section>
         <section className="footerSection">
@@ -117,7 +120,7 @@ export default function Footer() {
               <>
                 <div onClick={() => router.push("/careers")}>Careers</div>
                 <div onClick={() => router.push("/help")}>Help Center</div>
-                <div onClick={() => router.push("/company")}>About NEX</div>
+                <div onClick={() => router.push("/playtesting")}>Playtesting</div>
               </>
             )}
           </div>
