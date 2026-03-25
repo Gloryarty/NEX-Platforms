@@ -147,7 +147,6 @@ export default function Home() {
                   immediate recognition, and a presentation block that sells the
                   loadout fantasy directly.
                 </p>
-                <button onClick={() => router.push("/games")}>Open Loadout</button>
               </div>
             </article>
           </section>
