@@ -11,7 +11,7 @@
     .mainWrapper {
         display: flex;
         flex-direction: column;
-        gap: 1.1rem;
+        gap: 0;
         padding-top: 1.6rem;
         padding-bottom: 3rem;
     }
@@ -236,6 +236,7 @@ section.hero {
 .intelSection,
 .communitySection {
     padding: 1rem 0 0;
+    background: linear-gradient(180deg, rgba(8, 12, 17, 0.97) 0%, rgba(8, 12, 17, 0.99) 100%);
 }
 
 .sectionIntro,
