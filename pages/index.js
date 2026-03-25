@@ -6,189 +6,277 @@ import Footer from "../components/Footer/Footer";
 import bg from "../res/BG.png";
 import logo from "../res/Logo.png";
 import gameLogo from "../res/Game_Logo.png";
+import g1 from "../res/g1.png";
+import g2 from "../res/g2_new.png";
+import g3 from "../res/g3.png";
+import g4 from "../res/g4_landscape.png";
+import g5 from "../res/g5.png";
+import g6 from "../res/g6.png";
 import baseConfig from "../res/baseConfig.json";
 import news from "../res/news.json";
-import searchData from "../res/searchData.json";
+
+const gameplayCards = [
+  {
+    tag: "Retake Mode",
+    title: "Fast entries, tighter sites, constant pressure.",
+    body: "Every round starts closer to impact. Attackers break space quickly, defenders retake under pressure, and the pace never drops.",
+    image: g4,
+  },
+  {
+    tag: "Precision Gunplay",
+    title: "Low noise. High lethality.",
+    body: "Weapons, silhouettes, and contrast are tuned for immediate readability so every peek and every flick matters.",
+    image: g2,
+  },
+  {
+    tag: "Queue Again",
+    title: "Designed for one more round.",
+    body: "Short resets, instant rematches, and strong visual rhythm keep the flow close to classic tactical shooter sessions.",
+    image: g3,
+  },
+];
+
+const arsenalCards = [
+  {
+    tag: "Angles",
+    title: "Clear sightlines and brutal timing windows.",
+    text: "RushRetake is built around corners, swing timings, bombsite pressure, and last-second clears.",
+    image: g1,
+  },
+  {
+    tag: "Utility",
+    title: "Smoke the lane. Flash the retake.",
+    text: "Space control is the real weapon. Use utility to cut vision, isolate fights, and open the site.",
+    image: g5,
+  },
+  {
+    tag: "Momentum",
+    title: "The whole screen pushes forward.",
+    text: "Large-format art, hard overlays, and strong section transitions make the page feel like an active operation, not a brochure.",
+    image: g6,
+  },
+];
 
 export default function Home() {
   const router = useRouter();
-  const featuredGame = searchData.find((item) => item.name === "RushRetake");
-  const primaryNews = news[0];
-  const newsCards = news.slice(1, 4);
+  const launchNews = news[0];
 
-  const gotoSection = (sectionId) => {
-    document.getElementById(sectionId)?.scrollIntoView({ behavior: "smooth" });
+  const intelCards = [
+    {
+      tag: launchNews?.category || "Launch Intel",
+      title: launchNews?.shortTitle || "RushRetake is live",
+      text:
+        launchNews?.article ||
+        "RushRetake has launched with fast browser-based tactical rounds, sharp visual contrast, and instant rematches.",
+      action: () => router.push("/news"),
+      image: g2,
+    },
+    {
+      tag: "Gameplay",
+      title: "5v5 retake flow with instant rematches",
+      text: "Shorter downtime means more clutch moments, faster adaptation, and less waiting between high-stakes fights.",
+      action: () => router.push("/games"),
+      image: g6,
+    },
+    {
+      tag: "Community",
+      title: "Built for clips, scrims, and repeat sessions",
+      text: "The page now sells the game the same way the game wants to be played: directly, aggressively, and without filler.",
+      action: () => router.push("/contact"),
+      image: g3,
+    },
+  ];
+
+  const scrollToSection = (id) => {
+    document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
   };
 
   return (
     <>
       <Head>
-        <title>NEX Platforms</title>
-        <meta name="description" content="NEX Platforms" />
+        <title>RushRetake</title>
+        <meta
+          name="description"
+          content="RushRetake is a fast-paced tactical shooter by NEX Platforms."
+        />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Nav />
       <main className="homePage">
-        <Image className="heroBg" src={bg} alt="NEX Platforms battleground" priority />
+        <Image className="heroBg" src={bg} alt="RushRetake key art" priority />
         <div className="heroShade"></div>
+
         <div className="mainWrapper">
-          <section className="hero">
+          <section className="hero" id="game">
             <div className="heroCopy">
-              <div className="eyebrow">TACTICAL FPS PLATFORM</div>
+              <div className="eyebrow">Counter-Terrorist Retake Experience</div>
               <div className="heroBadge">
                 <Image src={logo} alt="NEX Platforms" />
-                LIVE OPERATION // RUSHRETAKE
+                LIVE NOW ON NEX PLATFORMS
               </div>
-              <div className="title">The next round starts with RushRetake.</div>
-              <div className="subTitle">
-                Built around tight angles, instant respawns, and high-pressure retakes,
-                NEX Platforms now delivers a darker, more direct landing experience
-                inspired by Counter-Strike&apos;s official presentation.
-              </div>
+              <h1 className="title">RushRetake</h1>
+              <p className="subTitle">
+                A one-page game launch experience built around one idea: tight
+                angles, fast resets, hard reads, and the kind of round flow that
+                makes you queue again immediately.
+              </p>
               <div className="heroBtnSet">
-                <button onClick={() => gotoSection("featured")} className="heroBtn primary">
-                  View Operation
+                <button onClick={() => router.push("/games")} className="heroBtn primary">
+                  Play Now
                 </button>
-                <button onClick={() => router.push("/news")} className="heroBtn secondary">
-                  Latest Intel
+                <button onClick={() => scrollToSection("modes")} className="heroBtn secondary">
+                  Explore Gameplay
                 </button>
-              </div>
-              <div className="heroStats">
-                <div className="statCard">
-                  <span className="value">
-                    {baseConfig.users}
-                    {baseConfig.user_count_unit === "million" ? "M" : ""}
-                  </span>
-                  <span className="label">Players Reached</span>
-                </div>
-                <div className="statCard">
-                  <span className="value">24/7</span>
-                  <span className="label">Instant Browser Access</span>
-                </div>
-                <div className="statCard">
-                  <span className="value">01</span>
-                  <span className="label">Active Competitive Release</span>
-                </div>
               </div>
             </div>
 
             <div className="heroPanel">
-              <div className="panelTop">Featured Deployment</div>
+              <div className="panelTop">Active Operation</div>
               <div className="panelMedia">
-                <Image src={gameLogo} alt="RushRetake" />
+                <Image src={gameLogo} alt="RushRetake logo" />
               </div>
-              <div className="panelTitle">{featuredGame?.name || "RushRetake"}</div>
+              <div className="panelTitle">RushRetake</div>
               <div className="panelText">
-                {featuredGame?.shortDesc ||
-                  "Fast-paced tactical shooter by NEX Platforms."}
+                Fast-paced tactical shooter by NEX Platforms. Browser-ready,
+                round-first, and built for pressure.
               </div>
               <div className="panelList">
-                <div>5v5 retake flow with instant rematches</div>
-                <div>High-contrast arenas and weapon-first pacing</div>
-                <div>Designed for spectators, clips, and repeat sessions</div>
+                <div>5v5 retake format</div>
+                <div>Immediate requeue rhythm</div>
+                <div>Readable silhouettes and high contrast</div>
               </div>
             </div>
           </section>
 
-          <section id="featured" className="combatStrip">
-            <div className="stripIntro">
-              <span className="sectionLabel">Operation Brief</span>
-              <h2>One game. One front line. No filler sections.</h2>
+          <section className="statStrip">
+            <div className="statCard">
+              <span className="value">
+                {baseConfig.users}
+                {baseConfig.user_count_unit === "million" ? "M" : ""}
+              </span>
+              <span className="label">Players Reached</span>
+            </div>
+            <div className="statCard">
+              <span className="value">5v5</span>
+              <span className="label">Tactical Retake Format</span>
+            </div>
+            <div className="statCard">
+              <span className="value">24/7</span>
+              <span className="label">Instant Browser Access</span>
+            </div>
+            <div className="statCard">
+              <span className="value">01</span>
+              <span className="label">Live Competitive Release</span>
+            </div>
+          </section>
+
+          <section className="showcaseSection" id="modes">
+            <div className="sectionIntro">
+              <span className="sectionLabel">Gameplay</span>
+              <h2>Built around the retake, not the waiting room.</h2>
               <p>
-                The homepage now follows a more editorial shooter layout: hard
-                contrast, compact navigation, disciplined spacing, and large
-                promotional blocks instead of startup-style cards.
+                RushRetake strips the loop down to what matters most: gunfights,
+                timing, site control, utility, and momentum.
               </p>
             </div>
 
-            <div className="stripCards">
-              <article className="featureCard large">
-                <span className="cardTag">Current Release</span>
-                <h3>RushRetake is live</h3>
-                <p>
-                  A launch-focused hero card with direct CTA priority, modeled after
-                  the way Counter-Strike surfaces a single active operation.
-                </p>
-                <button onClick={() => router.push("/games")}>Open Game Library</button>
-              </article>
-
-              <article className="featureCard">
-                <span className="cardTag">Presentation</span>
-                <h3>Condensed headings and utility chrome</h3>
-                <p>
-                  Typography, palette, and panel hierarchy were tightened to feel more
-                  like a shooter broadcast than a SaaS landing page.
-                </p>
-              </article>
-
-              <article className="featureCard">
-                <span className="cardTag">Navigation</span>
-                <h3>Heavy header with utilitarian controls</h3>
-                <p>
-                  Buttons, borders, and surfaces now lean into steel, sand, smoke, and
-                  amber accents rather than glossy gradients.
-                </p>
-              </article>
+            <div className="showcaseGrid">
+              {gameplayCards.map((card) => (
+                <article key={card.title} className="showcaseCard">
+                  <div className="cardImage">
+                    <Image src={card.image} alt={card.title} />
+                  </div>
+                  <div className="cardCopy">
+                    <span className="cardTag">{card.tag}</span>
+                    <h3>{card.title}</h3>
+                    <p>{card.body}</p>
+                  </div>
+                </article>
+              ))}
             </div>
           </section>
 
-          <section className="intelSection">
+          <section className="operationSection">
+            <div className="operationFeature">
+              <div className="featureVisual">
+                <Image src={g1} alt="RushRetake operation art" />
+              </div>
+              <div className="featureCopy">
+                <span className="sectionLabel">Operation Brief</span>
+                <h2>One page, one game, one clear fantasy.</h2>
+                <p>
+                  This homepage is now centered on RushRetake itself: the live
+                  release, the play pattern, the visual identity, and the feeling
+                  of stepping into a round already in motion.
+                </p>
+                <button onClick={() => router.push("/games")}>Enter The Match</button>
+              </div>
+            </div>
+
+            <div className="arsenalGrid">
+              {arsenalCards.map((card) => (
+                <article key={card.title} className="arsenalCard">
+                  <div className="arsenalImage">
+                    <Image src={card.image} alt={card.title} />
+                  </div>
+                  <span className="cardTag">{card.tag}</span>
+                  <h3>{card.title}</h3>
+                  <p>{card.text}</p>
+                </article>
+              ))}
+            </div>
+          </section>
+
+          <section className="intelSection" id="intel">
             <div className="sectionHeader">
               <span className="sectionLabel">Latest Intel</span>
-              <h2>News front and center.</h2>
+              <h2>Launch, updates, and live signal.</h2>
             </div>
 
             <div className="intelGrid">
-              {primaryNews && (
-                <article
-                  className="intelLead"
-                  onClick={() => router.push(`/news/${primaryNews.shortTitle}`)}
-                >
-                  <img src={primaryNews.thumbnail} alt={primaryNews.shortTitle} />
-                  <div className="intelOverlay">
-                    <span>{primaryNews.category}</span>
-                    <h3>{primaryNews.shortTitle}</h3>
-                    <p>{primaryNews.article}</p>
-                  </div>
-                </article>
-              )}
+              <article className="intelLead" onClick={() => router.push("/news")}>
+                <Image src={g4} alt="RushRetake live release" />
+                <div className="intelOverlay">
+                  <span>{launchNews?.date || "March 20, 2026"}</span>
+                  <h3>{launchNews?.shortTitle || "RushRetake is live"}</h3>
+                  <p>
+                    {launchNews?.article ||
+                      "RushRetake brings quick rounds, tight gunplay, and team-focused objectives in an experience that loads in seconds."}
+                  </p>
+                </div>
+              </article>
 
               <div className="intelStack">
-                {newsCards.map((item) => (
-                  <article
-                    key={item.id}
-                    className="intelCard"
-                    onClick={() => router.push(`/news/${item.shortTitle}`)}
-                  >
-                    <img src={item.thumbnail} alt={item.shortTitle} />
-                    <div>
-                      <span>{item.date}</span>
-                      <h3>{item.shortTitle}</h3>
+                {intelCards.map((item) => (
+                  <article key={item.title} className="intelCard" onClick={item.action}>
+                    <div className="intelThumb">
+                      <Image src={item.image} alt={item.title} />
+                    </div>
+                    <div className="intelCopy">
+                      <span>{item.tag}</span>
+                      <h3>{item.title}</h3>
+                      <p>{item.text}</p>
                     </div>
                   </article>
                 ))}
-                <button className="allNewsBtn" onClick={() => router.push("/news")}>
-                  View All News
-                </button>
               </div>
             </div>
           </section>
 
-          <section className="signalSection">
-            <div className="signalPanel">
-              <span className="sectionLabel">Community Signal</span>
-              <h2>Built for players who want the round to start immediately.</h2>
+          <section className="communitySection" id="community">
+            <div className="communityCopy">
+              <span className="sectionLabel">Community</span>
+              <h2>Lock in, queue up, and push the site.</h2>
               <p>
-                NEX Platforms keeps the message tight: launch, watch, queue,
-                repeat. If you want the same direction across inner pages, this
-                new homepage gives the visual base for it.
+                If the visual direction should stay fully game-first, this page is
+                now the baseline: dark, cinematic, aggressive, and centered on
+                RushRetake from the first viewport to the last CTA.
               </p>
             </div>
-
-            <div className="signalActions">
-              <button onClick={() => router.push("/contact")}>Contact Studio</button>
-              <button onClick={() => router.push("/company")}>Read About NEX</button>
+            <div className="communityActions">
+              <button onClick={() => router.push("/games")}>Play RushRetake</button>
+              <button onClick={() => router.push("/news")}>Read Launch Notes</button>
             </div>
           </section>
 

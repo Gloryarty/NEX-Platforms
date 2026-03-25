@@ -1,80 +1,62 @@
 import Image from "next/image";
-import React from "react";
-import logo from "../../res/Logo.png";
 import { useRouter } from "next/router";
+import logo from "../../res/Logo.png";
 import baseConfig from "../../res/baseConfig.json";
-
-const rushRetake = {
-  name: "RushRetake",
-  link: "#",
-};
-const productList = [rushRetake];
-
-const handleClick = (url) => {
-  const elem = document.createElement("a");
-  elem.href = url;
-  elem.target = "blank";
-  elem.click();
-};
 
 export default function Footer() {
   const router = useRouter();
+
+  const goToSection = (id) => {
+    if (router.pathname !== "/") {
+      router.push(`/#${id}`);
+      return;
+    }
+
+    document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
+  };
+
   return (
     <footer>
       <div className="footerHero">
         <div className="lCont">
           <div className="logoCont">
             <Image src={logo} alt="logo" />
-            NEX Platforms
+            RushRetake
           </div>
-          <div className="footerHeroTitle">Experiences that matter.</div>
+          <div className="footerHeroTitle">Fast-paced tactical shooter by NEX Platforms.</div>
           <div className="location">
-            <i className="ri-map-pin-2-fill"></i>United States
+            <i className="ri-shield-cross-line"></i>Live Operation
           </div>
         </div>
         <div className="rCont">
-          <button
-            className="contact-btn"
-            onClick={() => router.push("/contact")}
-          >
-            Contact
+          <button className="contact-btn" onClick={() => router.push("/games")}>
+            Play Now
           </button>
-          <button
-            className="partnership-btn"
-            onClick={() => router.push("/partnership")}
-          >
-            Partnership
+          <button className="partnership-btn" onClick={() => router.push("/news")}>
+            Launch Notes
           </button>
         </div>
       </div>
       <div className="footerMain">
         <section className="footerSection social">
-          <div className="header">Social Media</div>
-          <div className="socialMedia">
-            <i className="ri-twitter-fill twitter icon"></i>
-            <i
-              className="ri-youtube-fill youtube icon"
-              onClick={() =>
-                handleClick(
-                  "#"
-                )
-              }
-            ></i>
-            <i className="ri-discord-fill discord icon"></i>
+          <div className="header">RushRetake</div>
+          <div className="referenceHolder">
+            <div onClick={() => goToSection("game")}>Overview</div>
+            <div onClick={() => goToSection("modes")}>Gameplay</div>
+            <div onClick={() => goToSection("intel")}>Intel</div>
+            <div onClick={() => goToSection("community")}>Community</div>
           </div>
           <div className="mainLogoCont">
             <Image src={logo} alt="logo" />
-            <div>NEX Platforms</div>
+            <div>RushRetake</div>
           </div>
         </section>
         <section className="footerSection">
-          <div className="header">Product</div>
+          <div className="header">Play</div>
           <div className="referenceHolder">
-            {productList.map((item, index) => (
-              <div onClick={() => handleClick(item.link)} key={index}>
-                {item.name}
-              </div>
-            ))}
+            <div onClick={() => router.push("/games")}>Open Game</div>
+            <div onClick={() => router.push("/news")}>Read Update</div>
+            <div onClick={() => router.push("/contact")}>Contact Team</div>
           </div>
         </section>
         <section className="footerSection">
@@ -86,26 +68,24 @@ export default function Footer() {
           </div>
         </section>
         <section className="footerSection">
-          <div className="header">Company</div>
+          <div className="header">Studio</div>
           <div className="referenceHolder">
-            <div onClick={() => router.push("/accessibility")}>
-              Accessibility
-            </div>
-            <div onClick={() => router.push("/policies")}>Ethics Policy</div>
+            <div onClick={() => router.push("/company")}>About NEX</div>
             <div onClick={() => router.push("/innovation")}>Innovation</div>
+            <div onClick={() => router.push("/contact")}>Support</div>
           </div>
         </section>
         <section className="footerSection">
-          <div className="header">Directory</div>
+          <div className="header">Status</div>
           <div className="referenceHolder">
-            <div onClick={() => router.push("/company")}>About NEX Platforms</div>
-            <div onClick={() => router.push("/careers")}>Careers</div>
-            <div>Help Center</div>
+            <div>Live Release</div>
+            <div>{baseConfig.users}+ community</div>
+            <div>Round-first gameplay</div>
           </div>
         </section>
       </div>
       <div className="footerEnd">
-        {baseConfig.service_till} NEX Platforms - All Rights Reserved.
+        {baseConfig.service_till} RushRetake - All Rights Reserved.
       </div>
     </footer>
   );
