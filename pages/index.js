@@ -63,32 +63,6 @@ export default function Home() {
   const router = useRouter();
   const launchNews = news[0];
 
-  const intelCards = [
-    {
-      tag: launchNews?.category || "Launch Intel",
-      title: launchNews?.shortTitle || "RushRetake is live",
-      text:
-        launchNews?.article ||
-        "RushRetake has launched with fast browser-based tactical rounds, sharp visual contrast, and instant rematches.",
-      action: () => router.push("/news"),
-      image: g2,
-    },
-    {
-      tag: "Gameplay",
-      title: "5v5 retake flow with instant rematches",
-      text: "Shorter downtime means more clutch moments, faster adaptation, and less waiting between high-stakes fights.",
-      action: () => router.push("/games"),
-      image: g6,
-    },
-    {
-      tag: "Community",
-      title: "Built for clips, scrims, and repeat sessions",
-      text: "The page now sells the game the same way the game wants to be played: directly, aggressively, and without filler.",
-      action: () => router.push("/contact"),
-      image: g3,
-    },
-  ];
-
   const scrollToSection = (id) => {
     document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
   };
@@ -236,34 +210,17 @@ export default function Home() {
               <h2>Launch, updates, and live signal.</h2>
             </div>
 
-            <div className="intelGrid">
-              <article className="intelLead" onClick={() => router.push("/news")}>
-                <Image src={bg} alt="RushRetake live release" />
-                <div className="intelOverlay">
-                  <span>{launchNews?.date || "March 20, 2026"}</span>
-                  <h3>{launchNews?.shortTitle || "RushRetake is live"}</h3>
-                  <p>
-                    {launchNews?.article ||
-                      "RushRetake brings quick rounds, tight gunplay, and team-focused objectives in an experience that loads in seconds."}
-                  </p>
-                </div>
-              </article>
-
-              <div className="intelStack">
-                {intelCards.map((item) => (
-                  <article key={item.title} className="intelCard" onClick={item.action}>
-                    <div className="intelThumb">
-                      <Image src={item.image} alt={item.title} />
-                    </div>
-                    <div className="intelCopy">
-                      <span>{item.tag}</span>
-                      <h3>{item.title}</h3>
-                      <p>{item.text}</p>
-                    </div>
-                  </article>
-                ))}
+            <article className="intelLead intelLeadWide" onClick={() => router.push("/news")}>
+              <Image src={bg} alt="RushRetake live release" />
+              <div className="intelOverlay">
+                <span>{launchNews?.date || "March 20, 2026"}</span>
+                <h3>{launchNews?.shortTitle || "RushRetake is live"}</h3>
+                <p>
+                  {launchNews?.article ||
+                    "RushRetake brings quick rounds, tight gunplay, and team-focused objectives in an experience that loads in seconds."}
+                </p>
               </div>
-            </div>
+            </article>
           </section>
 
           <section className="communitySection" id="community">

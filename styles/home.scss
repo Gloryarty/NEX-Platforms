@@ -356,12 +356,6 @@ section.hero {
     gap: 1rem;
 }
 
-.intelGrid {
-    display: grid;
-    grid-template-columns: minmax(0, 1.2fr) minmax(320px, .8fr);
-    gap: 1rem;
-}
-
 .intelLead {
     position: relative;
     min-height: 34rem;
@@ -397,25 +391,9 @@ section.hero {
     }
 }
 
-.intelStack {
-    display: grid;
-    gap: 1rem;
-}
-
-.intelCard {
-    display: grid;
-    grid-template-columns: 9rem minmax(0, 1fr);
-    cursor: pointer;
-    transition: transform 180ms ease, border-color 180ms ease;
-
-    &:hover {
-        transform: translateY(-2px);
-        border-color: #ffffff30;
-    }
-}
-
-.intelThumb {
-    min-height: auto;
+.intelLeadWide {
+    width: 100%;
+    min-height: 45rem;
 }
 
 .communitySection {
@@ -462,7 +440,6 @@ section.hero {
 
     section.hero,
     .operationFeature,
-    .intelGrid,
     .communitySection {
         grid-template-columns: 1fr;
     }
