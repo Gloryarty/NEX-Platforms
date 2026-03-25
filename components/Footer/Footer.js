@@ -5,6 +5,7 @@ import baseConfig from "../../res/baseConfig.json";
 
 export default function Footer() {
   const router = useRouter();
+  const isHome = router.pathname === "/";
 
   const goToSection = (id) => {
     if (router.pathname !== "/") {
@@ -21,42 +22,70 @@ export default function Footer() {
         <div className="lCont">
           <div className="logoCont">
             <Image src={logo} alt="logo" />
-            RushRetake
+            {isHome ? "RushRetake" : "NEX Platforms"}
           </div>
-          <div className="footerHeroTitle">Fast-paced tactical shooter by NEX Platforms.</div>
+          <div className="footerHeroTitle">
+            {isHome
+              ? "Fast-paced tactical shooter by NEX Platforms."
+              : "Games, updates, and platform news from NEX Platforms."}
+          </div>
           <div className="location">
-            <i className="ri-shield-cross-line"></i>Live Operation
+            <i className={isHome ? "ri-shield-cross-line" : "ri-map-pin-2-fill"}></i>
+            {isHome ? "Live Operation" : "United States"}
           </div>
         </div>
         <div className="rCont">
-          <button className="contact-btn" onClick={() => router.push("/games")}>
-            Play Now
+          <button
+            className="contact-btn"
+            onClick={() => router.push(isHome ? "/games" : "/contact")}
+          >
+            {isHome ? "Play Now" : "Contact"}
           </button>
-          <button className="partnership-btn" onClick={() => router.push("/news")}>
-            Launch Notes
+          <button
+            className="partnership-btn"
+            onClick={() => router.push(isHome ? "/news" : "/news")}
+          >
+            {isHome ? "Launch Notes" : "News"}
           </button>
         </div>
       </div>
       <div className="footerMain">
         <section className="footerSection social">
-          <div className="header">RushRetake</div>
+          <div className="header">{isHome ? "RushRetake" : "NEX Platforms"}</div>
           <div className="referenceHolder">
-            <div onClick={() => goToSection("game")}>Overview</div>
-            <div onClick={() => goToSection("modes")}>Gameplay</div>
-            <div onClick={() => goToSection("intel")}>Intel</div>
-            <div onClick={() => goToSection("community")}>Community</div>
+            {isHome ? (
+              <>
+                <div onClick={() => goToSection("game")}>Overview</div>
+                <div onClick={() => goToSection("modes")}>Gameplay</div>
+                <div onClick={() => goToSection("intel")}>Intel</div>
+                <div onClick={() => goToSection("community")}>Community</div>
+              </>
+            ) : (
+              <>
+                <div onClick={() => router.push("/")}>Home</div>
+                <div onClick={() => router.push("/games")}>Games</div>
+                <div onClick={() => router.push("/news")}>News</div>
+                <div onClick={() => router.push("/company")}>Company</div>
+              </>
+            )}
           </div>
           <div className="mainLogoCont">
             <Image src={logo} alt="logo" />
-            <div>RushRetake</div>
+            <div>{isHome ? "RushRetake" : "NEX Platforms"}</div>
           </div>
         </section>
         <section className="footerSection">
-          <div className="header">Play</div>
+          <div className="header">{isHome ? "Play" : "Platform"}</div>
           <div className="referenceHolder">
-            <div onClick={() => router.push("/games")}>Open Game</div>
-            <div onClick={() => router.push("/news")}>Read Update</div>
-            <div onClick={() => router.push("/contact")}>Contact Team</div>
+            <div onClick={() => router.push("/games")}>
+              {isHome ? "Open Game" : "Game Library"}
+            </div>
+            <div onClick={() => router.push("/news")}>
+              {isHome ? "Read Update" : "Press Releases"}
+            </div>
+            <div onClick={() => router.push("/contact")}>
+              {isHome ? "Contact Team" : "Contact Team"}
+            </div>
           </div>
         </section>
         <section className="footerSection">
@@ -76,16 +105,26 @@ export default function Footer() {
           </div>
         </section>
         <section className="footerSection">
-          <div className="header">Status</div>
+          <div className="header">{isHome ? "Status" : "Directory"}</div>
           <div className="referenceHolder">
-            <div>Live Release</div>
-            <div>{baseConfig.users}+ community</div>
-            <div>Round-first gameplay</div>
+            {isHome ? (
+              <>
+                <div>Live Release</div>
+                <div>{baseConfig.users}+ community</div>
+                <div>Round-first gameplay</div>
+              </>
+            ) : (
+              <>
+                <div onClick={() => router.push("/careers")}>Careers</div>
+                <div onClick={() => router.push("/help")}>Help Center</div>
+                <div onClick={() => router.push("/company")}>About NEX</div>
+              </>
+            )}
           </div>
         </section>
       </div>
       <div className="footerEnd">
-        {baseConfig.service_till} RushRetake - All Rights Reserved.
+        {baseConfig.service_till} {isHome ? "RushRetake" : "NEX Platforms"} - All Rights Reserved.
       </div>
     </footer>
   );
