@@ -12,6 +12,7 @@ import g3 from "../res/g3.png";
 import g4 from "../res/g4_landscape.png";
 import g5 from "../res/g5.png";
 import g6 from "../res/g6.png";
+import deathmatchModeCover from "../res/Deathmatch_Mode_Cover.png";
 import rrArsenal from "../res/RR_Arsenal.png";
 import baseConfig from "../res/baseConfig.json";
 import news from "../res/news.json";
@@ -30,10 +31,10 @@ const gameplayCards = [
     image: g2,
   },
   {
-    tag: "Queue Again",
-    title: "Designed for one more round.",
-    body: "Short resets, instant rematches, and strong visual rhythm keep the flow close to classic tactical shooter sessions.",
-    image: g3,
+    tag: "Deathmatch",
+    title: "Warm up fast. Refrag faster.",
+    body: "Deathmatch keeps the guns hot between serious rounds: instant respawns, nonstop duels, and pure aim reps under pressure.",
+    image: deathmatchModeCover,
   },
 ];
 
